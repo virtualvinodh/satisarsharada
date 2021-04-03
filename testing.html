@@ -18,22 +18,48 @@
 
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
+        <script src='https://s.keyman.com/kmw/engine/14.0.270/keymanweb.js'></script>
+        <script src='https://s.keyman.com/kmw/engine/14.0.270/kmwuitoggle.js'></script>
+
         <script>
+            (function(kmw) {
+              kmw.init({attachType:'auto'});
+              kmw.init({attachType:'auto'});
+            })(keyman);
+
+            var debugKeyboards = [];
+(function() {
+  var kmw=KeymanWeb;
+  kmw.KRS({
+    KN:"sharada_unicode_phonetic",
+    KI:"Keyboard_sharada_unicode_phonetic",
+    KL:"sharada_unicode_phonetic",
+    KLC:"en",
+    KR:"Europe",
+    KRC:"eu",
+    KF:"sharada_unicode_phonetic-1.0.js"
+  });
+  debugKeyboards["sharada_unicode_phonetic"] = {
+    id:"sharada_unicode_phonetic",
+    version:"1.0"
+  };})();
+            function onLoad() {
+              queryString = window.location.search
+              const tab = queryString.split('=')[1]
+              if (typeof tab !== 'undefined') {
+                console.log(tab)
+                openTab(null, tab);
+              }
+            }
             function changeFont(name) {
               x = document.getElementsByClassName("sharada");
 
                 for (i = 0; i < x.length; i++) {
-                  if (name === "fontaprant") {
-                    x[i].className = x[i].className.replace(" compshar", " " + name);
-                    x[i].className = x[i].className.replace(" fontsharada", " " + name);
-                  }
                   if (name == "fontsharada") {
                     x[i].className = x[i].className.replace(" compshar", " " + name);
-                    x[i].className = x[i].className.replace(" fontaprant", " " + name);
                   }
                   if (name == "compshar") {
                     x[i].className = x[i].className.replace(" fontsharada", " " + name);
-                    x[i].className = x[i].className.replace(" fontaprant", " " + name);
                   }
                 }
 
@@ -41,11 +67,7 @@
 
 
                 for (i = 0; i < x.length; i++) {
-                  if (name === "fontaprant") {
-                    x[i].className = x[i].className.replace("fontsharada", "" + name);
-                  }
                   if (name == "fontsharada") {
-                    x[i].className = x[i].className.replace("fontaprant", "" + name);
                   }
                 }
 
@@ -70,7 +92,13 @@
                 x[i].style.lineHeight=size;
               }
             }
-            function openCity(evt, cityName) {
+            function openTab(evt, tabName) {
+              const url = new URL(window.location.href);
+
+              url.searchParams.delete('tab');
+              url.searchParams.set('tab', tabName);
+              window.history.replaceState(null, null, url);
+
               var i, x, tablinks;
               x = document.getElementsByClassName("sharada");
               for (i = 0; i < x.length; i++) {
@@ -80,8 +108,8 @@
               for (i = 0; i < x.length; i++) {
                 tablinks[i].className = tablinks[i].className.replace(" w3-grey", "");
               }
-              document.getElementById(cityName).style.display = "block";
-              evt.currentTarget.className += " w3-grey";
+              document.getElementById(tabName).style.display = "block";
+              document.getElementById('tab' + tabName).className += " w3-grey";
             }
             </script>
 
@@ -101,11 +129,6 @@
               font-size:25px;
               line-height: 1.7em;
             }
-             .fontaprant{
-              font-family: 'APUni Kashmiri Sharada';
-              font-size:30px;
-              line-height: 1.7em;
-            }
             h1 {
             }
             textarea {
@@ -115,30 +138,33 @@
             </style>
 </head>
 
-    <body>
+    <body onload="onLoad()">
         <div class="w3-sidebar w3-bar-block w3-light-grey w3-card" style="width:130px;padding-left: 10px;">
             <small>
-              <button class="w3-bar-item w3-button tablink" onclick="openCity(event, 'home')">Home</button>
-              <button class="w3-bar-item w3-button tablink" onclick="openCity(event, 'Text-Vedic')">Text: Vedic</button>
-              <button class="w3-bar-item w3-button tablink" onclick="openCity(event, 'Text-Hridaya')">Text: Hridaya</button>
-              <button class="w3-bar-item w3-button tablink" onclick="openCity(event, 'Text-Nilakantha')">Text: Nilakantha</button>
-              <button class="w3-bar-item w3-button tablink" onclick="openCity(event, 'Text-Ushnisha')">Text: Ushnisha</button>
-              <button class="w3-bar-item w3-button tablink" onclick="openCity(event, 'Text-Lalitavistara')">Text: Lalitavistara</button>
-              <button class="w3-bar-item w3-button tablink" onclick="openCity(event, 'Text-Lotus')">Text: Lotus</button>
-              <button class="w3-bar-item w3-button tablink" onclick="openCity(event, 'Text-Dhammachakka')">Text: Dhammachakka</button>
-            <button class="w3-bar-item w3-button tablink" onclick="openCity(event, 'input')">Input</button>
-            <button class="w3-bar-item w3-button tablink" onclick="openCity(event, 'Text-Basic')">Basic</button>
-            <button class="w3-bar-item w3-button tablink" onclick="openCity(event, 'Text-Basic-2')">Basic 2</button>
-            <button class="w3-bar-item w3-button tablink" onclick="openCity(event, 'Text-Basic-Ayogavaha')">Basic Ayogavaha</button>
-            <button class="w3-bar-item w3-button tablink" onclick="openCity(event, 'Text-Conjuncts')">Conjuncts</button>
-            <!-- <button onclick="changeFont('fontaprant')">Aprant </button> -->
+              <button class="w3-bar-item w3-button tablink" id="tabhome" onclick="openTab(event, 'home')">Home</button>
+              <button class="w3-bar-item w3-button tablink" id="tabinput" onclick="openTab(event, 'input')">Input</button>
+              <button class="w3-bar-item w3-button tablink" id="tabText-Basic" onclick="openTab(event, 'Text-Basic')">Basic</button>
+              <button class="w3-bar-item w3-button tablink" id="tabText-Basic-2" onclick="openTab(event, 'Text-Basic-2')">Basic 2</button>
+              <button class="w3-bar-item w3-button tablink" id="tabText-Basic-Ayogavaha" onclick="openTab(event, 'Text-Basic-Ayogavaha')">Basic Ayogavaha</button>
+              <button class="w3-bar-item w3-button tablink" id="tabConjuncts" onclick="openTab(event, 'Text-Conjuncts')">Conjuncts</button>
+              <button class="w3-bar-item w3-button tablink" id="tabText-Vedic" onclick="openTab(event, 'Text-Vedic')">Text: Vedic</button>
+              <button class="w3-bar-item w3-button tablink" id="tabshreesukta" onclick="openTab(event, 'shreesukta')">Text: Vedic 2</button>
+              <button class="w3-bar-item w3-button tablink" id="tabText-Hridaya" onclick="openTab(event, 'Text-Hridaya')">Text: Hridaya</button>
+              <button class="w3-bar-item w3-button tablink" id="tabText-Nilakantha" onclick="openTab(event, 'Text-Nilakantha')">Text: Nilakantha</button>
+              <button class="w3-bar-item w3-button tablink" id="tabText-Ushnisha" onclick="openTab(event, 'Text-Ushnisha')">Text: Ushnisha</button>
+              <button class="w3-bar-item w3-button tablink" id="tabText-Lalitavistara" onclick="openTab(event, 'Text-Lalitavistara')">Text: Lalitavistara</button>
+              <button class="w3-bar-item w3-button tablink" id="tabText-Lotus" onclick="openTab(event, 'Text-Lotus')">Text: Lotus</button>
+              <button class="w3-bar-item w3-button tablink" id="tabText-Dhammachakka" onclick="openTab(event, 'Text-Dhammachakka')">Text: Dhammachakka</button>
+
             </small>
           </div>
           <div style="margin-left:150px;margin-top: 10px;margin-right:30px">
             Font Size: <input id="inputfont" type="range" oninput="changeFontSize(this.value)" min="10" max="100" value="25" step="2"/>
             Line Height: <input id="inputline" type="range" oninput="changeLineSize(this.value)" min="0" max="3" value="1.7" step="0.1"/><br/><br/>
             <button onclick="changeFont('fontsharada')">Satisar Normal</button>
-            <button onclick="changeFont('compshar')">Satisar Compact</button> <br/>
+            <button onclick="changeFont('compshar')">Satisar Compact</button>
+
+            <br/>
             <hr/>
              <div class="sharada fontsharada" id="home">
               <h1 class="fontsharada">𑆱𑆠𑆵𑆱𑆫𑇀 𑆯𑆳𑆫𑆢𑆳 : Test Page</h1>
@@ -201,6 +227,20 @@
 
             </script>
 
+            </div>
+            <div id="purusha" class="sharada444 fontsharada"  style="display:none">
+              <h1 class="fontsharada">                           𑆃𑆡 𑆥𑆶𑆫𑆶𑆰𑆱𑆷𑆑𑇀𑆠𑆩𑇀 𑇆
+
+              </h1>
+
+              𑇄 𑆠𑆖𑇀𑆗𑆁॒ 𑆪𑆾𑆫𑆳𑆮𑆸॑𑆟𑆵𑆩𑆲𑆼 𑇅 𑆓𑆳॒𑆠𑆶𑆁 𑆪॒𑆘𑇀𑆚𑆳𑆪॑ 𑇅 𑆓𑆳॒𑆠𑆶𑆁 𑆪॒𑆘𑇀𑆚𑆥॑𑆠𑆪𑆼 𑇅 𑆢𑆽𑆮𑆵᳚ 𑆱𑇀𑆮॒𑆱𑇀𑆠𑆴𑆫॑𑆱𑇀𑆠𑆶 𑆤𑆂 𑇅<br\>              𑆱𑇀𑆮॒𑆱𑇀𑆠𑆴𑆫𑇀𑆩𑆳𑆤𑆶॑𑆰𑆼𑆨𑇀𑆪𑆂 𑇅 𑆈॒𑆫𑇀𑆣𑇀𑆮𑆁 𑆘𑆴॑𑆓𑆳𑆠𑆶 𑆨𑆼𑆰॒𑆘𑆩𑇀 𑇅 𑆯𑆤𑇀𑆤𑆾॑ 𑆃𑆱𑇀𑆠𑆶 𑆢𑇀𑆮𑆴॒𑆥𑆢𑆼᳚ 𑇅 𑆯𑆁 𑆖𑆠𑆶॑𑆰𑇀𑆥𑆢𑆼 𑇅<br\>              𑇄 𑆯𑆳𑆤𑇀𑆠𑆴॒𑆂 𑆯𑆳𑆤𑇀𑆠𑆴॒𑆂 𑆯𑆳𑆤𑇀𑆠𑆴॑𑆂 𑇅<br\>              <br\>              𑆲𑆫𑆴𑆂 𑇄 𑇅<br\>              𑇄 𑆱॒𑆲𑆱𑇀𑆫॑𑆯𑆵𑆫𑇀𑆰𑆳॒ 𑆥𑆶𑆫𑆶॑𑆰𑆂 𑇅 𑆱॒𑆲॒𑆱𑇀𑆫𑆳॒𑆑𑇀𑆰𑆂 𑆱॒𑆲𑆱𑇀𑆫॑𑆥𑆳𑆠𑇀 𑇅<br\>              𑆱 𑆨𑆷𑆩𑆴𑆁॑ 𑆮𑆴॒𑆯𑇀𑆮𑆠𑆾॑ 𑆮𑆸॒𑆠𑇀𑆮𑆳 𑇅 𑆃𑆠𑇀𑆪॑𑆠𑆴𑆰𑇀𑆜𑆢𑇀𑆢𑆯𑆳𑆕𑇀𑆓𑆶॒𑆬𑆩𑇀 𑇅 𑇑<br\>              𑆥𑆶𑆫𑆶॑𑆰 𑆍॒𑆮𑆼𑆢ꣳ 𑆱𑆫𑇀𑆮𑆩𑇀᳚ 𑇅 𑆪𑆢𑇀𑆨𑆷॒𑆠𑆁 𑆪𑆖𑇀𑆖॒ 𑆨𑆮𑇀𑆪𑆩𑇀᳚𑇅<br\>              𑆇॒𑆠𑆳𑆩𑆸॑𑆠॒𑆠𑇀𑆮𑆱𑇀𑆪𑆼𑆯𑆳॑𑆤𑆂 𑇅 𑆪𑆢𑆤𑇀𑆤𑆼॑𑆤𑆳𑆠𑆴॒𑆫𑆾𑆲॑𑆠𑆴 𑇅 𑇒<br\>              𑆍॒𑆠𑆳𑆮𑆳॑𑆤𑆱𑇀𑆪 𑆩𑆲𑆴॒𑆩𑆳 𑇅 𑆃𑆠𑆾॒ 𑆘𑇀𑆪𑆳𑆪𑆳ꣳ॑𑆯𑇀𑆖॒ 𑆥𑆷𑆫𑆶॑𑆰𑆂 𑇅<br\>              𑆥𑆳𑆢𑆾᳚𑇁𑆱𑇀𑆪॒ 𑆮𑆴𑆯𑇀𑆮𑆳॑ 𑆨𑆷॒𑆠𑆳𑆤𑆴॑ 𑇅 𑆠𑇀𑆫𑆴॒𑆥𑆳𑆢॑𑆱𑇀𑆪𑆳॒𑆩𑆸𑆠𑆁॑ 𑆢𑆴॒𑆮𑆴 𑇅 𑇓<br\>              𑆠𑇀𑆫𑆴॒𑆥𑆳𑆢𑆷॒𑆫𑇀𑆣𑇀𑆮 𑆇𑆢𑆽॒𑆠𑇀𑆥𑆶𑆫𑆶॑𑆰𑆂 𑇅 𑆥𑆳𑆢𑆾᳚𑇁𑆱𑇀𑆪𑆼॒𑆲𑆳𑇁𑇁𑆨॑𑆮𑆳॒𑆠𑇀𑆥𑆶𑆤॑𑆂 𑇅<br\>              𑆠𑆠𑆾॒ 𑆮𑆴𑆯𑇀𑆮॒𑆕𑇀𑆮𑇀𑆪॑𑆑𑇀𑆫𑆳𑆩𑆠𑇀 𑇅 𑆱𑆳॒𑆯॒𑆤𑆳॒𑆤॒𑆯॒𑆤𑆼 𑆃॒𑆨𑆴 𑇅 𑇔<br\>              𑆠𑆱𑇀𑆩𑆳᳚𑆢𑇀𑆮𑆴॒𑆫𑆳𑆝॑𑆘𑆳𑆪𑆠 𑇅 𑆮𑆴॒𑆫𑆳𑆘𑆾॒ 𑆃𑆣𑆴॒ 𑆥𑆷𑆫𑆶॑𑆰𑆂 𑇅<br\>              𑆱 𑆘𑆳॒𑆠𑆾 𑆃𑆠𑇀𑆪॑𑆫𑆴𑆖𑇀𑆪𑆠 𑇅 𑆥॒𑆯𑇀𑆖𑆳𑆢𑇀𑆨𑆷𑆩𑆴॒𑆩𑆡𑆾॑ 𑆥𑆶॒𑆫𑆂 𑇅 𑇕<br\>              𑆪𑆠𑇀𑆥𑆶𑆫𑆶॑𑆰𑆼𑆟 𑆲॒𑆮𑆴𑆰𑆳᳚ 𑇅 𑆢𑆼॒𑆮𑆳 𑆪॒𑆘𑇀𑆚𑆩𑆠॑𑆤𑇀𑆮𑆠 𑇅<br\>              𑆮॒𑆱॒𑆤𑇀𑆠𑆾 𑆃॑𑆱𑇀𑆪𑆳𑆱𑆵॒𑆢𑆳𑆘𑇀𑆪𑆩𑇀᳚ 𑇅 𑆓𑇀𑆫𑆵॒𑆰𑇀𑆩 𑆅॒𑆣𑇀𑆩𑆂 𑆯॒𑆫𑆢𑇀𑆣॒𑆮𑆴𑆂 𑇅 𑇖<br\>              𑆱॒𑆥𑇀𑆠𑆳𑆱𑇀𑆪𑆳॑𑆱𑆤𑇀𑆥𑆫𑆴॒𑆣𑆪॑𑆂 𑇅 𑆠𑇀𑆫𑆴𑆂 𑆱॒𑆥𑇀𑆠 𑆱॒𑆩𑆴𑆣॑𑆂 𑆑𑆸॒𑆠𑆳𑆂 𑇅<br\>              𑆢𑆼॒𑆮𑆳 𑆪𑆢𑇀𑆪॒𑆘𑇀𑆚𑆁 𑆠॑𑆤𑇀𑆮𑆳॒𑆤𑆳𑆂 𑇅 𑆃𑆧॑𑆣𑇀𑆤॒𑆤𑇀𑆥𑆶॑𑆫𑆶𑆰𑆁 𑆥॒𑆯𑆶𑆩𑇀 𑇅 𑇗<br\>              𑆠𑆁 𑆪॒𑆘𑇀𑆚𑆁 𑆧॒𑆫𑇀𑆲𑆴𑆰𑆴॒ 𑆥𑇀𑆫𑆿𑆑𑇀𑆰𑆤𑇀॑ 𑇅 𑆥𑆶𑆫𑆶॑𑆰𑆁 𑆘𑆳॒𑆠𑆩॑𑆓𑇀𑆫॒𑆠𑆂 𑇅<br\>              𑆠𑆼𑆤॑ 𑆢𑆼॒𑆮𑆳 𑆃𑆪॑𑆘𑆤𑇀𑆠 𑇅 𑆱𑆳॒𑆣𑇀𑆪𑆳 𑆉𑆰॑𑆪𑆯𑇀𑆖॒ 𑆪𑆼 𑇅 𑇘<br\>              𑆠𑆱𑇀𑆩𑆳᳚𑆢𑇀𑆪॒𑆘𑇀𑆚𑆳𑆠𑇀𑆱॑𑆫𑇀𑆮॒𑆲𑆶𑆠॑𑆂 𑇅 𑆱𑆁𑆨𑆸॑𑆠𑆁 𑆥𑆸𑆰𑆢𑆳॒𑆘𑇀𑆪𑆩𑇀 𑇅<br\>              𑆥॒𑆯𑆷ꣳ𑆱𑇀𑆠𑆳ꣳ𑆯𑇀𑆖॑𑆑𑇀𑆫𑆼 𑆮𑆳𑆪॒𑆮𑇀𑆪𑆳𑆤𑇀॑ 𑇅 𑆄॒𑆫॒𑆟𑇀𑆪𑆳𑆤𑇀𑆓𑇀𑆫𑆳॒𑆩𑇀𑆪𑆳𑆯𑇀𑆖॒ 𑆪𑆼 𑇅 𑇙<br\>              𑆠𑆱𑇀𑆩𑆳᳚𑆢𑇀𑆪॒𑆘𑇀𑆚𑆳𑆠𑇀𑆱॑𑆫𑇀𑆮॒𑆲𑆶𑆠॑𑆂 𑇅 𑆉𑆖॒𑆂 𑆱𑆳𑆩𑆳॑𑆤𑆴 𑆘𑆘𑇀𑆚𑆴𑆫𑆼 𑇅<br\>              𑆗𑆤𑇀𑆢𑆳ꣳ॑𑆱𑆴 𑆘𑆘𑇀𑆚𑆴𑆫𑆼॒ 𑆠𑆱𑇀𑆩𑆳᳚𑆠𑇀 𑇅 𑆪𑆘𑆶॒𑆱𑇀𑆠𑆱𑇀𑆩𑆳॑𑆢𑆘𑆳𑆪𑆠 𑇅 𑇑𑇐<br\>              𑆠𑆱𑇀𑆩𑆳॒𑆢𑆯𑇀𑆮𑆳॑ 𑆃𑆘𑆳𑆪𑆤𑇀𑆠 𑇅 𑆪𑆼 𑆑𑆼 𑆖𑆾॑𑆨॒𑆪𑆳𑆢॑𑆠𑆂 𑇅<br\>              𑆓𑆳𑆮𑆾॑ 𑆲 𑆘𑆘𑇀𑆚𑆴𑆫𑆼॒ 𑆠𑆱𑇀𑆩𑆳᳚𑆠𑇀 𑇅 𑆠𑆱𑇀𑆩𑆳᳚𑆘𑇀𑆘𑆳॒𑆠𑆳 𑆃॑𑆘𑆳॒𑆮𑆪॑𑆂 𑇅 𑇑𑇑<br\>              𑆪𑆠𑇀𑆥𑆶𑆫𑆶॑𑆰𑆁॒ 𑆮𑇀𑆪॑𑆢𑆣𑆶𑆂 𑇅 𑆑॒𑆠𑆴॒𑆣𑆳 𑆮𑇀𑆪॑𑆑𑆬𑇀𑆥𑆪𑆤𑇀 𑇅<br\>              𑆩𑆶𑆒𑆁॒ 𑆑𑆴𑆩॑𑆱𑇀𑆪॒ 𑆑𑆿 𑆧𑆳॒𑆲𑆷 𑇅 𑆑𑆳𑆮𑆷॒𑆫𑆷 𑆥𑆳𑆢𑆳॑𑆮𑆶𑆖𑇀𑆪𑆼𑆠𑆼 𑇅 𑇑𑇒<br\>              𑆧𑇀𑆫𑆳॒𑆲𑇀𑆩॒𑆟𑆾᳚𑇁𑆱𑇀𑆪॒ 𑆩𑆶𑆒॑𑆩𑆳𑆱𑆵𑆠𑇀 𑇅 𑆧𑆳॒𑆲𑆷 𑆫𑆳॑𑆘॒𑆤𑇀𑆪॑𑆂 𑆑𑆸॒𑆠𑆂 𑇅<br\>              𑆈॒𑆫𑆷 𑆠𑆢॑𑆱𑇀𑆪॒ 𑆪𑆢𑇀𑆮𑆽𑆯𑇀𑆪॑𑆂 𑇅 𑆥॒𑆢𑇀𑆨𑇀𑆪𑆳ꣳ 𑆯𑆷॒𑆢𑇀𑆫𑆾 𑆃॑𑆘𑆳𑆪𑆠 𑇅 𑇑𑇓<br\>              𑆖॒𑆤𑇀𑆢𑇀𑆫𑆩𑆳॒ 𑆩𑆤॑𑆱𑆾 𑆘𑆳॒𑆠𑆂 𑇅 𑆖𑆑𑇀𑆰𑆾॒𑆂 𑆱𑆷𑆫𑇀𑆪𑆾॑ 𑆃𑆘𑆳𑆪𑆠 𑇅<br\>              𑆩𑆶𑆒𑆳॒𑆢𑆴𑆤𑇀𑆢𑇀𑆫॑𑆯𑇀𑆖𑆳॒𑆓𑇀𑆤𑆴𑆯𑇀𑆖॑ 𑇅  𑆥𑇀𑆫𑆳॒𑆟𑆳𑆢𑇀𑆮𑆳॒𑆪𑆶𑆫॑𑆘𑆳𑆪𑆠 𑇅 𑇑𑇔<br\>              𑆤𑆳𑆨𑇀𑆪𑆳॑ 𑆄𑆱𑆵𑆢॒𑆤𑇀𑆠𑆫𑆴॑𑆑𑇀𑆰𑆩𑇀 𑇅 𑆯𑆵॒𑆫𑇀𑆰𑇀𑆟𑆾 𑆢𑇀𑆪𑆿𑆂 𑆱𑆩॑𑆮𑆫𑇀𑆠𑆠 𑇅<br\>              𑆥॒𑆢𑇀𑆨𑇀𑆪𑆳𑆁 𑆨𑆷𑆩𑆴॒𑆫𑇀𑆢𑆴𑆯॒𑆂 𑆯𑇀𑆫𑆾𑆠𑇀𑆫𑆳᳚𑆠𑇀 𑇅 𑆠𑆡𑆳॑ 𑆬𑆾॒𑆑𑆳ꣳ 𑆃॑𑆑𑆬𑇀𑆥𑆪𑆤𑇀 𑇅 𑇑𑇕<br\>              𑆮𑆼𑆢𑆳॒𑆲𑆩𑆼॒𑆠𑆁 𑆥𑆶𑆫𑆶॑𑆰𑆁 𑆩॒𑆲𑆳𑆤𑇀𑆠𑆩𑇀᳚ 𑇅 𑆄॒𑆢𑆴॒𑆠𑇀𑆪𑆮॑𑆫𑇀𑆟𑆁॒ 𑆠𑆩॑𑆱𑆱𑇀𑆠𑆶॒ 𑆥𑆳॒𑆫𑆼 𑇅<br\>              𑆱𑆫𑇀𑆮𑆳॑𑆟𑆴 𑆫𑆷॒𑆥𑆳𑆟𑆴॑ 𑆮𑆴॒𑆖𑆴𑆠𑇀𑆪॒ 𑆣𑆵𑆫॑𑆂 𑇅 𑆤𑆳𑆩𑆳॑𑆤𑆴 𑆑𑆸॒𑆠𑇀𑆮𑆳𑇁𑆨𑆴॒𑆮𑆢॒𑆤𑇀 𑆪𑆢𑆳𑆱𑇀𑆠𑆼᳚ 𑇅 𑇑𑇖<br\>              𑆣𑆳॒𑆠𑆳 𑆥𑆶॒𑆫𑆱𑇀𑆠𑆳॒𑆢𑇀𑆪𑆩𑆶॑𑆢𑆳𑆘॒𑆲𑆳𑆫॑ 𑇅 𑆯॒𑆑𑇀𑆫𑆂 𑆥𑇀𑆫𑆮𑆴॒𑆢𑇀𑆮𑆳𑆤𑇀𑆥𑇀𑆫॒𑆢𑆴𑆯॒𑆯𑇀𑆖𑆠॑𑆱𑇀𑆫𑆂 𑇅<br\>              𑆠𑆩𑆼॒𑆮𑆁 𑆮𑆴॒𑆢𑇀𑆮𑆳𑆤॒𑆩𑆸𑆠॑ 𑆅॒𑆲 𑆨॑𑆮𑆠𑆴 𑇅 𑆤𑆳𑆤𑇀𑆪𑆂 𑆥𑆤𑇀𑆡𑆳॒ 𑆃𑆪॑𑆤𑆳𑆪 𑆮𑆴𑆢𑇀𑆪𑆠𑆼 𑇅 𑇑𑇗<br\>              𑆪॒𑆘𑇀𑆚𑆼𑆤॑ 𑆪॒𑆘𑇀𑆚𑆩॑𑆪𑆘𑆤𑇀𑆠 𑆢𑆼॒𑆮𑆳𑆂 𑇅 𑆠𑆳𑆤𑆴॒ 𑆣𑆫𑇀𑆩𑆳॑𑆟𑆴 𑆥𑇀𑆫𑆡॒𑆩𑆳𑆤𑇀𑆪𑆳॑𑆱𑆤𑇀 𑇅<br\>              𑆠𑆼 𑆲॒ 𑆤𑆳𑆑𑆁॑ 𑆩𑆲𑆴॒𑆩𑆳𑆤॑𑆂 𑆱𑆖𑆤𑇀𑆠𑆼 𑇅 𑆪𑆠𑇀𑆫॒ 𑆥𑆷𑆫𑇀𑆮𑆼॑ 𑆱𑆳॒𑆣𑇀𑆪𑆳𑆂 𑆱𑆤𑇀𑆠𑆴॑ 𑆢𑆼॒𑆮𑆳𑆂 𑇅 𑇑𑇘<br\>              <br\>              𑇆 𑇄 𑆤𑆩𑆾 𑆤𑆳𑆫𑆳॑𑆪𑆟𑆳॒𑆪 𑇆<br\>              <br\>              𑇆 𑆇𑆠𑇀𑆠𑆫𑆤𑆳𑆫𑆳𑆪𑆟𑆩𑇀 𑇆<br\>              <br\>              𑆃॒𑆢𑇀𑆨𑇀𑆪𑆂 𑆱𑆁𑆨𑆷॑𑆠𑆂 𑆥𑆸𑆡𑆴॒𑆮𑇀𑆪𑆽 𑆫𑆱𑆳᳚𑆖𑇀𑆖 𑇅 𑆮𑆴॒𑆯𑇀𑆮𑆑॑𑆫𑇀𑆩𑆟॒𑆂 𑆱𑆩॑𑆮𑆫𑇀𑆠॒𑆠𑆳𑆣𑆴॑ 𑇅<br\>              𑆠𑆱𑇀𑆪॒ 𑆠𑇀𑆮𑆰𑇀𑆛𑆳॑ 𑆮𑆴॒𑆢𑆣॑𑆢𑇀𑆫𑆷॒𑆥𑆩𑆼॑𑆠𑆴 𑇅 𑆠𑆠𑇀𑆥𑆶𑆫𑆶॑𑆰𑆱𑇀𑆪॒ 𑆮𑆴𑆯𑇀𑆮॒𑆩𑆳𑆘𑆳॑𑆤॒𑆩𑆓𑇀𑆫𑆼᳚ 𑇅 𑇑<br\>              𑆮𑆼𑆢𑆳॒𑆲𑆩𑆼॒𑆠𑆁 𑆥𑆶𑆫𑆶॑𑆰𑆁 𑆩॒𑆲𑆳𑆤𑇀𑆠𑆩𑇀᳚ 𑇅 𑆄॒𑆢𑆴॒𑆠𑇀𑆪𑆮॑𑆫𑇀𑆟𑆁॒ 𑆠𑆩॑𑆱॒𑆂 𑆥𑆫॑𑆱𑇀𑆠𑆳𑆠𑇀 𑇅<br\>              𑆠𑆩𑆼॒𑆮𑆁 𑆮𑆴॒𑆢𑇀𑆮𑆳𑆤॒𑆩𑆸𑆠॑ 𑆅॒𑆲 𑆨॑𑆮𑆠𑆴 𑇅 𑆤𑆳𑆤𑇀𑆪𑆂 𑆥𑆤𑇀𑆡𑆳॑ 𑆮𑆴𑆢𑇀𑆪॒𑆠𑆼𑆪॑𑇁𑆤𑆳𑆪 𑇅 𑇒<br\>              𑆥𑇀𑆫॒𑆘𑆳𑆥॑𑆠𑆴𑆯𑇀𑆖𑆫𑆠𑆴॒ 𑆓𑆫𑇀𑆨𑆼॑ 𑆃॒𑆤𑇀𑆠𑆂 𑇅 𑆃॒𑆘𑆳𑆪॑𑆩𑆳𑆤𑆾 𑆧𑆲𑆶॒𑆣𑆳 𑆮𑆴𑆘𑆳॑𑆪𑆠𑆼 𑇅<br\>              𑆠𑆱𑇀𑆪॒ 𑆣𑆵𑆫𑆳॒𑆂 𑆥𑆫𑆴॑𑆘𑆳𑆤𑆤𑇀𑆠𑆴॒ 𑆪𑆾𑆤𑆴𑆩𑇀᳚ 𑇅 𑆩𑆫𑆵॑𑆖𑆵𑆤𑆳𑆁 𑆥॒𑆢𑆩𑆴॑𑆖𑇀𑆗𑆤𑇀𑆠𑆴<br\>              𑆮𑆼॒𑆣𑆱॑𑆂 𑇅 𑇓<br\>              𑆪𑆾 𑆢𑆼॒𑆮𑆼𑆨𑇀𑆪॒ 𑆄𑆠॑𑆥𑆠𑆴 𑇅 𑆪𑆾 𑆢𑆼॒𑆮𑆳𑆤𑆳𑆁᳚ 𑆥𑆶॒𑆫𑆾𑆲𑆴॑𑆠𑆂 𑇅<br\>              𑆥𑆷𑆫𑇀𑆮𑆾॒ 𑆪𑆾 𑆢𑆼॒𑆮𑆼𑆨𑇀𑆪𑆾॑ 𑆘𑆳॒𑆠𑆂 𑇅 𑆤𑆩𑆾॑ 𑆫𑆶॒𑆖𑆳𑆪॒ 𑆧𑇀𑆫𑆳𑆲𑇀𑆩॑𑆪𑆼 𑇅 𑇔<br\>              𑆫𑆶𑆖𑆁॑ 𑆧𑇀𑆫𑆳॒𑆲𑇀𑆩𑆩𑇀 𑆘॒𑆤𑆪॑𑆤𑇀𑆠𑆂 𑇅 𑆢𑆼॒𑆮𑆳 𑆃𑆓𑇀𑆫𑆼॒ 𑆠𑆢॑𑆧𑇀𑆫𑆶𑆮𑆤𑇀 𑇅<br\>              𑆪𑆱𑇀𑆠𑇀𑆮𑆽॒𑆮𑆁 𑆧𑇀𑆫𑆳᳚𑆲𑇀𑆩॒𑆟𑆾 𑆮𑆴॒𑆢𑇀𑆪𑆳𑆠𑇀 𑇅 𑆠𑆱𑇀𑆪॑ 𑆢𑆼॒𑆮𑆳 𑆃𑆱॒𑆤𑇀 𑆮𑆯𑆼᳚ 𑇅 𑇕<br\>              𑆲𑇀𑆫𑆵𑆯𑇀𑆖॑ 𑆠𑆼 𑆬॒𑆑𑇀𑆰𑇀𑆩𑆵𑆯𑇀𑆖॒ 𑆥𑆠𑇀𑆤𑇀𑆪𑆿᳚ 𑇅 𑆃॒𑆲𑆾॒𑆫𑆳॒𑆠𑇀𑆫𑆼 𑆥𑆳॒𑆫𑇀𑆯𑇀𑆮𑆼 𑇅<br\>              𑆤𑆑𑇀𑆰॑𑆠𑇀𑆫𑆳𑆟𑆴 𑆫𑆷॒𑆥𑆩𑇀 𑇅 𑆃॒𑆯𑇀𑆮𑆴𑆤𑆿॒ 𑆮𑇀𑆪𑆳𑆠𑇀𑆠𑆩𑇀᳚ 𑇅  𑆅॒𑆰𑇀𑆛𑆩𑇀 𑆩॑𑆤𑆴𑆰𑆳𑆟 𑇅<br\>              𑆃॒𑆩𑆶𑆁 𑆩॑𑆤𑆴𑆰𑆳𑆟 𑇅  𑆱𑆫𑇀𑆮॑𑆩𑇀  𑆩𑆤𑆴𑆰𑆳𑆟 𑇅 𑇖<br\>              <br\>              𑇄 𑆠𑆖𑇀𑆗𑆁॒ 𑆪𑆾𑆫𑆳𑆮𑆸॑𑆟𑆵𑆩𑆲𑆼 𑇅 𑆓𑆳॒𑆠𑆶𑆁 𑆪॒𑆘𑇀𑆚𑆳𑆪॑ 𑇅 𑆓𑆳॒𑆠𑆶𑆁 𑆪𑆘𑇀𑆚𑆥॑𑆠𑆪𑆼 𑇅 𑆢𑆽𑆮𑆵᳚𑆱𑇀𑆱𑇀𑆮॒𑆱𑇀𑆠𑆴𑆫॑𑆱𑇀𑆠𑆶 𑆤𑆂 𑇅<br\>              𑆱𑇀𑆮॒𑆱𑇀𑆠𑆴𑆫𑇀𑆩𑆳𑆤𑆶॑𑆰𑆼𑆨𑇀𑆪𑆂 𑇅 𑆈॒𑆫𑇀𑆣𑇀𑆮𑆁 𑆘𑆴॑𑆓𑆳𑆠𑆶 𑆨𑆼𑆰॒𑆘𑆩𑇀 𑇅 𑆯𑆤𑇀𑆤𑆾॑ 𑆃𑆱𑇀𑆠𑆶 𑆢𑇀𑆮𑆴॒𑆥𑆢𑆼᳚ 𑇅 𑆯𑆁 𑆖𑆠𑆶॑𑆰𑇀𑆥𑆢𑆼 𑇅<br\>              <br\>              𑇄 𑆯𑆳𑆤𑇀𑆠𑆴॒𑆂 𑆯𑆳𑆤𑇀𑆠𑆴॒𑆂 𑆯𑆳𑆤𑇀𑆠𑆴॑𑆂 𑇅
+            </div>
+            <div id="shreesukta" class="sharada fontsharada"  style="display:none">
+              <h1 class="fontsharada">              𑆯𑇀𑆫𑆵𑆱𑆷𑆑𑇀𑆠 (𑆉𑆓𑇀𑆮𑆼𑆢)
+              </h1>
+
+              𑇄 𑇆 𑆲𑆴𑆫॑𑆟𑇀𑆪𑆮𑆫𑇀𑆟𑆳𑆁॒ 𑆲𑆫𑆴॑𑆟𑆵𑆁 𑆱𑆶॒𑆮𑆫𑇀𑆟॑𑆫𑆘॒𑆠𑆱𑇀𑆫॑𑆘𑆳𑆩𑇀 𑇅<br\>              𑆖॒𑆤𑇀𑆢𑇀𑆫𑆳𑆁 𑆲𑆴॒𑆫𑆟𑇀𑆩॑𑆪𑆵𑆁 𑆬॒𑆑𑇀𑆰𑇀𑆩𑆵𑆁 𑆘𑆳𑆠॑𑆮𑆼𑆢𑆾 𑆩॒ 𑆄𑆮॑𑆲 𑇆 𑇑𑇆<br\>              <br\>              𑆠𑆳𑆁 𑆩॒ 𑆄𑆮॑𑆲॒ 𑆘𑆳𑆠॑𑆮𑆼𑆢𑆾 𑆬॒𑆑𑇀𑆰𑇀𑆩𑆵𑆩𑆤॑𑆥𑆓𑆳॒𑆩𑆴𑆤𑆵᳚𑆩𑇀 𑇅<br\>              𑆪𑆱𑇀𑆪𑆳𑆁॒ 𑆲𑆴𑆫॑𑆟𑇀𑆪𑆁 𑆮𑆴॒𑆤𑇀𑆢𑆼𑆪𑆁॒ 𑆓𑆳𑆩𑆯𑇀𑆮𑆁॒ 𑆥𑆶𑆫𑆶॑𑆰𑆳𑆤॒𑆲𑆩𑇀 𑇆 𑇒𑇆<br\>              <br\>              𑆃॒𑆯𑇀𑆮॒𑆥𑆷॒𑆫𑇀𑆮𑆳𑆁 𑆫॑𑆡𑆩॒𑆣𑇀𑆪𑆳𑆁 𑆲॒𑆱𑇀𑆠𑆴𑆤𑆳᳚𑆢𑆥𑇀𑆫॒𑆧𑆾𑆣𑆴॑𑆤𑆵𑆩𑇀 𑇅<br\>              𑆯𑇀𑆫𑆴𑆪𑆁॑ 𑆢𑆼॒𑆮𑆵𑆩𑆶𑆥॑𑆲𑇀𑆮𑆪𑆼॒ 𑆯𑇀𑆫𑆵𑆫𑇀𑆩𑆳᳚𑆢𑆼॒𑆮𑆵𑆫𑇀𑆘𑆶॑𑆰𑆠𑆳𑆩𑇀 𑇆 𑇓𑇆<br\>              <br\>              𑆑𑆳𑆁॒ 𑆱𑆾॒𑆱𑇀𑆩𑆴॒𑆠𑆳𑆁 𑆲𑆴𑆫॑𑆟𑇀𑆪𑆥𑇀𑆫𑆳॒𑆑𑆳𑆫𑆳॑𑆩𑆳॒𑆫𑇀𑆢𑇀𑆫𑆳𑆁 𑆘𑇀𑆮𑆬॑𑆤𑇀𑆠𑆵𑆁 𑆠𑆸॒𑆥𑇀𑆠𑆳𑆁 𑆠॒𑆫𑇀𑆥𑆪॑𑆤𑇀𑆠𑆵𑆩𑇀 𑇅<br\>              𑆥॒𑆢𑇀𑆩𑆼॒ 𑆱𑇀𑆡𑆴॒𑆠𑆳𑆁 𑆥॒𑆢𑇀𑆩𑆮॑𑆫𑇀𑆟𑆳𑆁॒ 𑆠𑆳𑆩𑆴॒𑆲𑆾𑆥॑𑆲𑇀𑆮𑆪𑆼॒ 𑆯𑇀𑆫𑆴𑆪𑆩𑇀 𑇆 𑇔𑇆<br\>              <br\>
+                 𑆖॒𑆤𑇀𑆢𑇀𑆫𑆳𑆁 𑆥𑇀𑆫॑𑆨𑆳॒𑆱𑆳𑆁 𑆪॒𑆯𑆱𑆳॒ 𑆘𑇀𑆮𑆬॑𑆤𑇀𑆠𑆵𑆁॒ 𑆯𑇀𑆫𑆴𑆪𑆁॑ 𑆬𑆾॒𑆑𑆼 𑆢𑆼॒𑆮𑆘𑆶॑𑆰𑇀𑆛𑆳𑆩𑆶𑆢𑆳॒𑆫𑆳𑆩𑇀 𑇅<br\>              𑆠𑆳𑆁 𑆥॒𑆢𑇀𑆩𑆴𑆤𑆵॑𑆩𑆵𑆁॒ 𑆯𑆫॑𑆟𑆩॒𑆲𑆁 𑆥𑇀𑆫𑆥॑𑆢𑇀𑆪𑆼𑇁𑆬॒𑆑𑇀𑆰𑇀𑆩𑆵𑆫𑇀𑆩𑆼॑ 𑆤𑆯𑇀𑆪𑆠𑆳𑆁॒ 𑆠𑇀𑆮𑆳𑆁 𑆮𑆸॑𑆟𑆼 𑇆 𑇕𑇆<br\>              <br\>              𑆄॒𑆢𑆴॒𑆠𑇀𑆪𑆮॑𑆫𑇀𑆟𑆼॒ 𑆠𑆥॒𑆱𑆾𑇁𑆣𑆴॑𑆘𑆳॒𑆠𑆾 𑆮𑆤॒𑆱𑇀𑆥𑆠𑆴॒𑆱𑇀𑆠𑆮॑ 𑆮𑆸॒𑆑𑇀𑆰𑆾𑇁𑆡 𑆧𑆴॒𑆬𑇀𑆮𑆂 𑇅<br\>              𑆠𑆱𑇀𑆪॒ 𑆦𑆬𑆳᳚𑆤𑆴॒ 𑆠𑆥॒𑆱𑆳 𑆤𑆶॑𑆢𑆤𑇀𑆠𑆶 𑆩𑆳॒𑆪𑆳𑆤𑇀𑆠॑𑆫𑆳॒𑆪𑆳𑆯𑇀𑆖॑ 𑆧𑆳॒𑆲𑇀𑆪𑆳 𑆃॑𑆬॒𑆑𑇀𑆰𑇀𑆩𑆵𑆂 𑇆 𑇖𑇆<br\>              <br\>              𑆇𑆥𑆽॑𑆠𑆶॒ 𑆩𑆳𑆁 𑆢𑆼॑𑆮𑆱॒𑆒𑆂 𑆑𑆵॒𑆫𑇀𑆠𑆴𑆯𑇀𑆖॒ 𑆩𑆟𑆴॑𑆤𑆳 𑆱॒𑆲 𑇅<br\>              𑆥𑇀𑆫𑆳॒𑆢𑆶॒𑆫𑇀𑆨𑆷॒𑆠𑆾𑇁𑆱𑇀𑆩𑆴॑ 𑆫𑆳𑆰𑇀𑆛𑇀𑆫𑆼॒𑇁𑆱𑇀𑆩𑆴𑆤𑇀 𑆑𑆵॒𑆫𑇀𑆠𑆴𑆩𑆸॑𑆢𑇀𑆣𑆴𑆁 𑆢॒𑆢𑆳𑆠𑆶॑ 𑆩𑆼 𑇆 𑇗𑇆<br\>              <br\>              𑆑𑇀𑆰𑆶𑆠𑇀𑆥𑆴॑𑆥𑆳॒𑆱𑆳𑆩॑𑆬𑆳𑆁 𑆘𑇀𑆪𑆼॒𑆰𑇀𑆜𑆳𑆩॑𑆬॒𑆑𑇀𑆰𑇀𑆩𑆵𑆁 𑆤𑆳॑𑆯𑆪𑆳॒𑆩𑇀𑆪𑆲𑆩𑇀 𑇅<br\>              𑆃𑆨𑆷॑𑆠𑆴॒𑆩𑆱॑𑆩𑆸𑆢𑇀𑆣𑆴𑆁॒ 𑆖 𑆱𑆫𑇀𑆮𑆳𑆁॒ 𑆤𑆴𑆫𑇀𑆟𑆶॑𑆢 𑆩𑆼॒ 𑆓𑆸𑆲𑆳᳚𑆠𑇀 𑇆 𑇘𑇆<br\>              <br\>              𑆓𑆁॒𑆣॒𑆢𑇀𑆮𑆳॒𑆫𑆳𑆁 𑆢𑆶॑𑆫𑆳𑆣॒𑆫𑇀𑆰𑆳𑆁॒ 𑆤𑆴॒𑆠𑇀𑆪𑆥𑆶॑𑆰𑇀𑆛𑆳𑆁 𑆑𑆫𑆵॒𑆰𑆴𑆟𑆵᳚𑆩𑇀 𑇅<br\>              𑆆॒𑆯𑇀𑆮𑆫𑆵॑ꣳ 𑆱𑆫𑇀𑆮॑𑆨𑆷𑆠𑆳॒𑆤𑆳𑆁॒ 𑆠𑆳𑆩𑆴॒𑆲𑆾𑆥॑𑆲𑇀𑆮𑆪𑆼॒ 𑆯𑇀𑆫𑆴𑆪𑆩𑇀 𑇆 𑇙𑇆<br\>              <br\>              𑆩𑆤॑𑆱॒𑆂 𑆑𑆳𑆩॒𑆩𑆳𑆑𑆷᳚𑆠𑆴𑆁 𑆮𑆳॒𑆖𑆂 𑆱॒𑆠𑇀𑆪𑆩॑𑆯𑆵𑆩𑆲𑆴 𑇅<br\>              𑆥॒𑆯𑆷॒𑆤𑆳𑆁 𑆫𑆷॒𑆥𑆩𑆤𑇀𑆤॑𑆱𑇀𑆪॒ 𑆩𑆪𑆴॒ 𑆯𑇀𑆫𑆵𑆂 𑆯𑇀𑆫॑𑆪𑆠𑆳𑆁॒ 𑆪𑆯॑𑆂 𑇆 𑇑𑇐𑇆<br\>              <br\>              𑆑॒𑆫𑇀𑆢𑆩𑆼॑𑆤 𑆥𑇀𑆫॑𑆘𑆳𑆨𑆷॒𑆠𑆳॒ 𑆩॒𑆪𑆴॒ 𑆱𑆩𑇀𑆨॑𑆮 𑆑॒𑆫𑇀𑆢𑆩 𑇅<br\>              𑆯𑇀𑆫𑆴𑆪𑆁॑ 𑆮𑆳॒𑆱𑆪॑ 𑆩𑆼 𑆑𑆶॒𑆬𑆼 𑆩𑆳॒𑆠𑆫𑆁॑ 𑆥𑆢𑇀𑆩॒𑆩𑆳𑆬𑆴॑𑆤𑆵𑆩𑇀 𑇆 𑇑𑇑𑇆<br\>              <br\>              𑆄𑆥॑𑆂 𑆱𑆸॒𑆘𑆤𑇀𑆠𑆶॑ 𑆱𑇀𑆤𑆴॒𑆓𑇀𑆣𑆳॒𑆤𑆴॒ 𑆖𑆴॒𑆑𑇀𑆬𑆵॒𑆠 𑆮॑𑆱 𑆩𑆼॒ 𑆓𑆸𑆲𑆼 𑇅<br\>              𑆤𑆴 𑆖॑ 𑆢𑆼॒𑆮𑆵𑆁 𑆩𑆳॒𑆠𑆫𑆁॒ 𑆯𑇀𑆫𑆴𑆪𑆁॑ 𑆮𑆳॒𑆱𑆪॑ 𑆩𑆼 𑆑𑆶॒𑆬𑆼 𑇆 𑇑𑇒𑇆<br\>              <br\>              𑆄॒𑆫𑇀𑆢𑇀𑆫𑆳𑆁 𑆥𑆶॒𑆰𑇀𑆑𑆫𑆴॑𑆟𑆵𑆁 𑆥𑆶॒𑆰𑇀𑆛𑆴𑆁॒ 𑆥𑆴॒𑆕𑇀𑆓॒𑆬𑆳𑆁 𑆥॑𑆢𑇀𑆩𑆩𑆳॒𑆬𑆴𑆤𑆵𑆩𑇀 𑇅<br\>              𑆖॒𑆤𑇀𑆢𑇀𑆫𑆳𑆁 𑆲𑆴॒𑆫𑆟𑇀𑆩॑𑆪𑆵𑆁 𑆬॒𑆑𑇀𑆰𑇀𑆩𑆵𑆁 𑆘𑆳𑆠॑𑆮𑆼𑆢𑆾 𑆩॒ 𑆄𑆮॑𑆲 𑇆 𑇑𑇓𑇆<br\>              <br\>              𑆄॒𑆫𑇀𑆢𑇀𑆫𑆳𑆁 𑆪॒𑆂 𑆑𑆫𑆴॑𑆟𑆵𑆁 𑆪॒𑆰𑇀𑆛𑆴𑆁॒ 𑆱𑆶॒𑆮॒𑆫𑇀𑆟𑆳𑆁 𑆲𑆼॑𑆩𑆩𑆳॒𑆬𑆴𑆤𑆵𑆩𑇀 𑇅<br\>              𑆱𑆷॒𑆫𑇀𑆪𑆳𑆁 𑆲𑆴॒𑆫𑆟𑇀𑆩॑𑆪𑆵𑆁 𑆬॒𑆑𑇀𑆰𑇀𑆩𑆵𑆁॒ 𑆘𑆳𑆠॑𑆮𑆼𑆢𑆾 𑆩॒ 𑆄𑆮𑆲 𑇆 𑇑𑇔𑇆<br\>              <br\>              𑆠𑆳𑆁 𑆩॒ 𑆄𑆮॑𑆲॒ 𑆘𑆳𑆠॑𑆮𑆼𑆢𑆾 𑆬॒𑆑𑇀𑆰𑇀𑆩𑆵𑆩𑆤॑𑆥𑆓𑆳॒𑆩𑆴𑆤𑆵᳚𑆩𑇀 𑇅<br\>              𑆪𑆱𑇀𑆪𑆳𑆁॒ 𑆲𑆴॑𑆫𑆟𑇀𑆪𑆁॒ 𑆥𑇀𑆫𑆨𑆷॑𑆠𑆁॒ 𑆓𑆳𑆮𑆾॑ 𑆢𑆳॒𑆱𑇀𑆪𑆾𑇁𑆯𑇀𑆮𑆳᳚𑆤𑇀𑆮𑆴॒𑆤𑇀𑆢𑆼𑆪𑆁॒ 𑆥𑆶𑆫𑆶॑𑆰𑆳𑆤॒𑆲𑆩𑇀 𑇆 𑇑𑇕𑇆<br\>              <br\>              𑆪𑆂 𑆯𑆶𑆖𑆴॒𑆂 𑆥𑇀𑆫𑆪॑𑆠𑆾 𑆨𑆷॒𑆠𑇀𑆮𑆳 𑆘𑆶॒𑆲𑆶𑆪𑆳᳚𑆢𑆳𑆘𑇀𑆪॒ 𑆩𑆤𑇀𑆮॑𑆲𑆩𑇀 𑇅<br\>              𑆯𑇀𑆫𑆴𑆪॑𑆂 𑆥॒𑆚𑇀𑆖𑆢॑𑆯𑆫𑇀𑆖𑆁॒ 𑆖 𑆯𑇀𑆫𑆵॒𑆑𑆳𑆩॑𑆂 𑆱𑆠॒𑆠𑆁 𑆘॑𑆥𑆼𑆠𑇀 𑇆 𑇑𑇖𑇆<br\>              <br\>                                𑆦𑆬𑆯𑇀𑆫𑆶𑆠𑆴<br\>              𑆥॒𑆢𑇀𑆩𑆳॒𑆤॒𑆤𑆼 𑆥॑𑆢𑇀𑆩 𑆈॒𑆫𑆷॒ 𑆥॒𑆢𑇀𑆩𑆳𑆑𑇀𑆰𑆵॑ 𑆥𑆢𑇀𑆩॒𑆱𑆩𑇀𑆨॑𑆮𑆼 𑇅<br\>              𑆠𑇀𑆮𑆁 𑆩𑆳𑆁᳚ 𑆨॒𑆘𑆱𑇀𑆮॑ 𑆥॒𑆢𑇀𑆩𑆳॒𑆑𑇀𑆰𑆵॒ 𑆪𑆼॒𑆤 𑆱𑆿᳚𑆒𑇀𑆪𑆁 𑆬॒𑆨𑆳𑆩𑇀𑆪॑𑆲𑆩𑇀 𑇆<br\>              <br\>              𑆃𑆯𑇀𑆮॑𑆢𑆳॒𑆪𑆵 𑆓𑆾॑𑆢𑆳॒𑆪𑆵॒ 𑆣॒𑆤𑆢𑆳॑𑆪𑆵 𑆩॒𑆲𑆳𑆣॑𑆤𑆼 𑇅<br\>              𑆣𑆤𑆁 𑆩𑆼॒ 𑆘𑆶𑆰॑𑆠𑆳𑆁 𑆢𑆼॒𑆮𑆴॒ 𑆱॒𑆫𑇀𑆮𑆑𑆳॑𑆩𑆳𑆁𑆯𑇀𑆖॒ 𑆢𑆼𑆲𑆴॑ 𑆩𑆼 𑇆<br\>              <br\>              𑆥𑆶𑆠𑇀𑆫𑆥𑆿॒𑆠𑇀𑆫 𑆣॑𑆤𑆁 𑆣𑆳॒𑆤𑇀𑆪𑆁 𑆲॒𑆱𑇀𑆠𑇀𑆪𑆯𑇀𑆮𑆳॑𑆢𑆴𑆓॒𑆮𑆼 𑆫॑𑆡𑆩𑇀 𑇅<br\>              𑆥𑇀𑆫॒𑆘𑆳॒𑆤𑆳𑆁 𑆨॑𑆮𑆱𑆴 𑆩𑆳॒𑆠𑆳 𑆄॒𑆪𑆶𑆰𑇀𑆩॑𑆤𑇀𑆠𑆁 𑆑॒𑆫𑆾𑆠𑆶॑ 𑆩𑆳𑆩𑇀 𑇆<br\>              <br\>              𑆣𑆤॑𑆩॒𑆓𑇀𑆤𑆴𑆫𑇀𑆣॑𑆤𑆁 𑆮𑆳॒𑆪𑆶𑆫𑇀𑆣॑𑆤𑆁॒ 𑆱𑆷𑆫𑇀𑆪𑆾॑ 𑆣𑆤𑆁॒ 𑆮𑆱𑆶॑𑆂 𑇅<br\>              𑆣𑆤॒𑆩𑆴𑆤𑇀𑆢𑇀𑆫𑆾॒ 𑆧𑆸𑆲॒𑆱𑇀𑆥𑆠𑆴॒𑆫𑇀𑆮𑆫𑆶॑𑆟𑆁॒ 𑆣𑆤॒𑆩𑆯𑇀𑆤𑆶॑ 𑆠𑆼 𑇆<br\>              <br\>              𑆮𑆽𑆤॑𑆠𑆼𑆪॒ 𑆱𑆾𑆩𑆁॑ 𑆥𑆴𑆧॒ 𑆱𑆾𑆩𑆁॑ 𑆥𑆴𑆧𑆠𑆶 𑆮𑆸𑆠𑇀𑆫॒𑆲𑆳 𑇅<br\>              𑆱𑆾𑆩𑆁॒ 𑆣𑆤॑𑆱𑇀𑆪 𑆱𑆾॒𑆩𑆴𑆤𑆾॒ 𑆩𑆲𑇀𑆪𑆁॒ 𑆢𑆢𑆳॑𑆠𑆶 𑆱𑆾॒𑆩𑆴𑆤॑𑆂 𑇆<br\>              <br\>              𑆤 𑆑𑇀𑆫𑆾𑆣𑆾 𑆤 𑆖॑ 𑆩𑆳𑆠𑇀𑆱॒𑆫𑇀𑆪𑆁 𑆤॒ 𑆬𑆾𑆨𑆾॑ 𑆤𑆳𑆯𑆶॒𑆨𑆳 𑆩॑𑆠𑆴𑆂 𑇅<br\>              𑆨𑆮॑𑆤𑇀𑆠𑆴॒ 𑆑𑆸𑆠॑𑆥𑆶𑆟𑇀𑆪𑆳॒𑆤𑆳𑆁 𑆨॒𑆑𑇀𑆠𑆳𑆤𑆳𑆁 𑆯𑇀𑆫𑆵𑆱𑆷᳚𑆑𑇀𑆠𑆁 𑆘॒𑆥𑆼𑆠𑇀𑆱॑𑆢𑆳 𑇆<br\>              <br\>              𑆮𑆫𑇀𑆰॑𑆤𑇀𑆠𑆶॒ 𑆠𑆼 𑆮𑆴॑𑆨𑆳𑆮॒𑆫𑆴॒ 𑆢𑆴॒𑆮𑆾 𑆃॑𑆨𑇀𑆫𑆱𑇀𑆪॒ 𑆮𑆴𑆢𑇀𑆪𑆶॑𑆠𑆂 𑇅<br\>              𑆫𑆾𑆲॑𑆤𑇀𑆠𑆶॒ 𑆱𑆫𑇀𑆮॑𑆧𑆵॒𑆘𑆳॒𑆤𑇀𑆪॒𑆮 𑆧𑇀𑆫॑𑆲𑇀𑆩 𑆢𑇀𑆮𑆴॒𑆰𑆾 𑆘॑𑆲𑆴 𑇆<br\>              <br\>              𑆥𑆢𑇀𑆩॑𑆥𑇀𑆫𑆴𑆪𑆼 𑆥𑆢𑇀𑆩𑆴𑆤𑆴 𑆥𑆢𑇀𑆩॒𑆲𑆱𑇀𑆠𑆼 𑆥𑆢𑇀𑆩𑆳॑𑆬𑆪𑆼 𑆥𑆢𑇀𑆩𑆢𑆬𑆳𑆪॑𑆠𑆳𑆑𑇀𑆰𑆴 𑇅<br\>              𑆮𑆴𑆯𑇀𑆮॑𑆥𑇀𑆫𑆴𑆪𑆼॒ 𑆮𑆴𑆰𑇀𑆟𑆶 𑆩𑆤𑆾॑𑇁𑆤𑆶𑆑𑆷॒𑆬𑆼 𑆠𑇀𑆮𑆠𑇀𑆥𑆳॑𑆢𑆥॒𑆢𑇀𑆩𑆁 𑆩𑆪𑆴॒ 𑆱𑆤𑇀𑆤𑆴॑𑆣𑆠𑇀𑆱𑇀𑆮 𑇆<br\>              <br\>              𑆪𑆳 𑆱𑆳 𑆥𑆢𑇀𑆩𑆳॑𑆱𑆤॒𑆱𑇀𑆡𑆳 𑆮𑆴𑆥𑆶𑆬𑆑𑆛𑆴𑆠𑆛𑆵 𑆥𑆢𑇀𑆩॒𑆥𑆠𑇀𑆫𑆳॑𑆪𑆠𑆳॒𑆑𑇀𑆰𑆵 𑇅<br\>              𑆓𑆩𑇀𑆨𑆵𑆫𑆳 𑆮॑𑆫𑇀𑆠𑆤𑆳॒𑆨𑆴𑆂 𑆱𑇀𑆠𑆤𑆨𑆫 𑆤𑆩𑆴𑆠𑆳 𑆯𑆶𑆨𑇀𑆫 𑆮𑆱𑇀𑆠𑇀𑆫𑆾॑𑆠𑇀𑆠𑆫𑆵॒𑆪𑆳 𑇅<br\>              𑆬𑆑𑇀𑆰𑇀𑆩𑆵𑆫𑇀𑆢𑆴॒𑆮𑇀𑆪𑆽𑆫𑇀𑆓𑆘𑆼𑆤𑇀𑆢𑇀𑆫𑆽𑆫𑇀𑆩॒𑆟𑆴𑆓𑆟 𑆒𑆖𑆴𑆠𑆽𑆱𑇀𑆱𑇀𑆤𑆳𑆥𑆴𑆠𑆳 𑆲𑆼॑𑆩𑆑𑆶॒𑆩𑇀𑆨𑆽𑆂 𑇅<br\>              𑆤𑆴॒𑆠𑇀𑆪𑆁 𑆱𑆳 𑆥॑𑆢𑇀𑆩𑆲॒𑆱𑇀𑆠𑆳 𑆩𑆩 𑆮𑆱॑𑆠𑆶 𑆓𑆸॒𑆲𑆼 𑆱𑆫𑇀𑆮॒𑆩𑆳𑆕𑇀𑆓𑆬𑇀𑆪॑𑆪𑆶𑆑𑇀𑆠𑆳 𑇆<br\>              <br\>              𑆬॒𑆑𑇀𑆰𑇀𑆩𑆵𑆁 𑆑𑇀𑆰𑆵𑆫𑆱𑆩𑆶𑆢𑇀𑆫 𑆫𑆳𑆘𑆠𑆤𑆪𑆳𑆁 𑆯𑇀𑆫𑆵॒𑆫𑆁𑆓𑆣𑆳𑆩𑆼॑𑆯𑇀𑆮𑆫𑆵𑆩𑇀 𑇅<br\>              𑆢𑆳॒𑆱𑆵𑆨𑆷𑆠𑆱𑆩𑆱𑇀𑆠 𑆢𑆼𑆮 𑆮॒𑆤𑆴𑆠𑆳𑆁 𑆬𑆾॒𑆑𑆽𑆑॒ 𑆢𑆵𑆥𑆳𑆁॑𑆑𑆶𑆫𑆳𑆩𑇀 𑇅<br\>              𑆯𑇀𑆫𑆵𑆩𑆤𑇀𑆩𑆤𑇀𑆢𑆑𑆛𑆳𑆑𑇀𑆰𑆬𑆧𑇀𑆣 𑆮𑆴𑆨𑆮 𑆧𑇀𑆫॒𑆲𑇀𑆩𑆼𑆤𑇀𑆢𑇀𑆫𑆓𑆕𑇀𑆓𑆳॑𑆣𑆫𑆳𑆁 𑇅<br\>              𑆠𑇀𑆮𑆳𑆁 𑆠𑇀𑆫𑆽॒𑆬𑆾𑆑𑇀𑆪॒ 𑆑𑆶𑆛𑆶॑𑆩𑇀𑆧𑆴𑆤𑆵𑆁 𑆱॒𑆫𑆱𑆴𑆘𑆳𑆁 𑆮𑆤𑇀𑆢𑆼॒ 𑆩𑆶𑆑𑆶॑𑆤𑇀𑆢𑆥𑇀𑆫𑆴𑆪𑆳𑆩𑇀 𑇆<br\>              <br\>              𑆱𑆴॒𑆢𑇀𑆣॒𑆬॒𑆑𑇀𑆰𑇀𑆩𑆵𑆫𑇀𑆩𑆾॑𑆑𑇀𑆰𑆬॒𑆑𑇀𑆰𑇀𑆩𑆵॒𑆫𑇀𑆘॒𑆪𑆬॑𑆑𑇀𑆰𑇀𑆩𑆵𑆱𑇀𑆱॒𑆫𑆱𑇀𑆮॑𑆠𑆵 𑇅<br\>              𑆯𑇀𑆫𑆵𑆬𑆑𑇀𑆰𑇀𑆩𑆵𑆫𑇀𑆮॑𑆫𑆬॒𑆑𑇀𑆰𑇀𑆩𑆵॒𑆯𑇀𑆖॒ 𑆥𑇀𑆫॒𑆱𑆤𑇀𑆤𑆳 𑆩॑𑆩 𑆱॒𑆫𑇀𑆮𑆢𑆳 𑇆<br\>              <br\>              𑆮𑆫𑆳𑆁𑆑𑆶𑆯𑆿 𑆥𑆳𑆯𑆩𑆨𑆵॑𑆠𑆴𑆩𑆶॒𑆢𑇀𑆫𑆳𑆁॒ 𑆑॒𑆫𑆽𑆫𑇀𑆮𑆲𑆤𑇀𑆠𑆵𑆁 𑆑॑𑆩𑆬𑆳॒𑆱𑆤𑆱𑇀𑆡𑆳𑆩𑇀 <br\>              𑆧𑆳𑆬𑆳𑆫𑇀𑆑 𑆑𑆾𑆛𑆴 𑆥𑇀𑆫𑆠𑆴॑𑆨𑆳𑆁 𑆠𑇀𑆫𑆴॒𑆟𑆼॒𑆠𑇀𑆫𑆳𑆁॒ 𑆨॒𑆘𑆼𑆲𑆩𑆳𑆢𑇀𑆪𑆳𑆁 𑆘॑𑆓𑆢𑆵॒𑆯𑇀𑆮𑆫𑆵𑆁 𑆠𑆳𑆩𑇀 𑇆<br\>              <br\>              𑆱॒𑆫𑇀𑆮॒𑆩॒𑆕𑇀𑆓॒𑆬𑆩𑆳॒𑆕𑇀𑆓𑆬𑇀𑆪𑆼॑ 𑆯𑆴॒𑆮𑆼 𑆱॒𑆫𑇀𑆮𑆳𑆫𑇀𑆡॑ 𑆱𑆳𑆣𑆴𑆑𑆼 𑇅<br\>              𑆯𑆫॑𑆟𑇀𑆪𑆼 𑆠𑇀𑆫𑇀𑆪𑆩𑇀𑆧॑𑆑𑆼 𑆢𑆼॒𑆮𑆴॒ 𑆤𑆳॒𑆫𑆳𑆪॑𑆟𑆴 𑆤॒𑆩𑆾𑇁𑆱𑇀𑆠𑆶॑ 𑆠𑆼 𑇆<br\>              <br\>              𑆱𑆫𑆱𑆴𑆘𑆤𑆴𑆬𑆪𑆼 𑆱𑆫𑆾॑𑆘𑆲॒𑆱𑇀𑆠𑆼 𑆣𑆮𑆬𑆠𑆫𑆳𑆁𑆯𑆶𑆑 𑆓𑆤𑇀𑆣𑆩𑆳᳚𑆬𑇀𑆪𑆯𑆾॒𑆨𑆼 𑇅<br\>              𑆨𑆓𑆮𑆠𑆴 𑆲𑆫𑆴𑆮𑆬𑇀𑆬𑆨𑆼॑ 𑆩𑆤𑆾॒𑆘𑇀𑆚𑆼 𑆠𑇀𑆫𑆴𑆨𑆶𑆮𑆤𑆨𑆷𑆠𑆴𑆑𑆫𑆴𑆥𑇀𑆫॑𑆱𑆵𑆢 𑆩॒𑆲𑇀𑆪𑆩𑇀 𑇆<br\>              <br\>              𑆮𑆴𑆰𑇀𑆟𑆶॑𑆥॒𑆠𑇀𑆤𑆵𑆁 𑆑𑇀𑆰॑𑆩𑆳𑆁 𑆢𑆼॒𑆮𑆵𑆁॒ 𑆩𑆳॒𑆣𑆮𑆵𑆁᳚ 𑆩𑆳𑆣॒𑆮𑆥𑇀𑆫𑆴॑𑆪𑆳𑆩𑇀 𑇅<br\>              𑆮𑆴𑆰𑇀𑆟𑆾᳚𑆂 𑆥𑇀𑆫𑆴॒𑆪𑆱॑𑆒𑆵𑆁𑆩𑇀 𑆢𑆼॒𑆮𑆵𑆁॒ 𑆤॒𑆩𑆳॒𑆩𑇀𑆪𑆖𑇀𑆪𑆶॑𑆠𑆮॒𑆬𑇀𑆬𑆨𑆳𑆩𑇀 𑇆<br\>              <br\>              𑆩॒𑆲𑆳॒𑆬॒𑆑𑇀𑆰𑇀𑆩𑆵 𑆖॑ 𑆮𑆴॒𑆢𑇀𑆩𑆲𑆼॑ 𑆮𑆴𑆰𑇀𑆟𑆶𑆥॒𑆠𑇀𑆤𑆵 𑆖॑ 𑆣𑆵𑆩𑆲𑆵 𑇅 <br\>              𑆠𑆤𑇀𑆤𑆾॑ 𑆬𑆑𑇀𑆰𑇀𑆩𑆵𑆂 𑆥𑇀𑆫𑆖𑆾॒𑆢𑆪𑆳᳚𑆠𑇀 𑇆<br\>              <br\>              (𑆄𑆤॑𑆤𑇀𑆢॒𑆂 𑆑𑆫𑇀𑆢॑𑆩𑆂 𑆯𑇀𑆫𑆵𑆢𑆯𑇀𑆖𑆴॒𑆑𑇀𑆬𑆵𑆠॑ 𑆅𑆠𑆴॒ 𑆮𑆴𑆯𑇀𑆫𑆶॑𑆠𑆳𑆂 𑇅<br\>              𑆉𑆰॑𑆪॒𑆂 𑆯𑇀𑆫𑆴𑆪॑𑆂 𑆥𑆶𑆠𑇀𑆫𑆳॒𑆯𑇀𑆖 𑆯𑇀𑆫𑆵॒𑆫𑇀𑆢𑆼॑𑆮𑆵𑆫𑇀𑆢𑆼𑆮𑆠𑆳॒ 𑆩॑𑆠𑆳𑆂 <br\>              (𑆱𑇀𑆮𑆪𑆩𑇀 𑆯𑇀𑆫𑆵𑆫𑆼𑆮 𑆢𑆼𑆮𑆠𑆳 𑇆 ) variation)<br\>              <br\>              (𑆖𑆤𑇀𑆢𑇀𑆫𑆨𑆳𑆁 𑆬𑆑𑇀𑆰𑇀𑆩𑆵𑆩𑆵𑆯𑆳𑆤𑆳𑆩𑇀 𑆱𑆶𑆫𑇀𑆪𑆨𑆳𑆁 𑆯𑇀𑆫𑆴𑆪𑆩𑆵𑆯𑇀𑆮𑆫𑆵𑆩𑇀 𑇅<br\>              𑆖𑆤𑇀𑆢𑇀𑆫 𑆱𑆷𑆫𑇀𑆪𑆓𑇀𑆤𑆴 𑆱𑆫𑇀𑆮𑆳𑆨𑆳𑆩𑇀 𑆯𑇀𑆫𑆵𑆩𑆲𑆳𑆬𑆑𑇀𑆰𑇀𑆩𑆵𑆩𑆶𑆥𑆳𑆱𑇀𑆩𑆲𑆼 𑇆  variation)<br\>              <br\>              𑆯𑇀𑆫𑆵॒𑆮𑆫𑇀𑆖॑𑆱𑇀𑆪॒𑆩𑆳𑆪𑆶॑𑆰𑇀𑆪॒𑆩𑆳𑆫𑆾᳚𑆓𑇀𑆪॒𑆩𑆳𑆮𑆴॑𑆣𑆳॒𑆠𑇀 𑆥𑆮॑𑆩𑆳𑆤𑆁 𑆩𑆲𑆵॒𑆪𑆠𑆼᳚ 𑇅<br\>              𑆣॒𑆤𑆁 𑆣𑆳॒𑆤𑇀𑆪𑆁 𑆥॒𑆯𑆶𑆁 𑆧॒𑆲𑆶𑆥𑆶॑𑆠𑇀𑆫𑆬𑆳॒𑆨𑆁 𑆯॒𑆠𑆱𑆁॑𑆮𑆠𑇀𑆱॒𑆫𑆁 𑆢𑆵॒𑆫𑇀𑆔𑆩𑆳𑆪𑆶॑𑆂 𑇆<br\>              <br\>              𑆉𑆟𑆫𑆾𑆓𑆳𑆢𑆴𑆢𑆳𑆫𑆴𑆢𑇀𑆫𑇀𑆪𑆥𑆳॒𑆥𑆑𑇀𑆰𑆶॑𑆢॒𑆥𑆩𑆸𑆠𑇀𑆪॑𑆮𑆂 𑇅<br\>              𑆨𑆪॑𑆯𑆾॒𑆑𑆩॑𑆤𑆱𑇀𑆠𑆳॒𑆥𑆳 𑆤॒𑆯𑇀𑆪𑆤𑇀𑆠𑆶॑ 𑆩𑆩॒ 𑆱𑆫𑇀𑆮॑𑆢𑆳 𑇆<br\>              <br\>              𑆯𑇀𑆫𑆴𑆪𑆼॑ 𑆘𑆳॒𑆠 𑆯𑇀𑆫𑆴𑆪॒ 𑆄𑆤𑆴॑𑆫𑇀𑆪𑆳𑆪॒ 𑆯𑇀𑆫𑆴𑆪𑆁॒ 𑆮𑆪𑆾᳚ 𑆘𑆤𑆴॒𑆠𑆸𑆨𑇀𑆪𑆾᳚ 𑆢𑆣𑆳𑆠𑆶 𑇅<br\>              𑆯𑇀𑆫𑆴𑆪𑆁॒ 𑆮𑆱𑆳᳚𑆤𑆳 𑆃𑆩𑆸𑆠॒𑆠𑇀𑆮𑆩𑆳᳚𑆪॒𑆤𑇀 𑆨𑆘𑆁᳚𑆠𑆴 𑆱॒𑆢𑇀𑆪𑆂 𑆱॑𑆮𑆴॒𑆠𑆳 𑆮𑆴॒𑆢𑆣𑇀𑆪𑆷𑆤𑇀॑ 𑇆<br\>              <br\>              𑆯𑇀𑆫𑆴𑆪॑ 𑆍𑆮𑆽𑆤𑆁 𑆠𑆖𑇀𑆗𑇀𑆫𑆴॒𑆪𑆳𑆩𑆳॑𑆢𑆣𑆳॒𑆠𑆴 𑇅 𑆱॒𑆤𑇀𑆠॒𑆠॒𑆩𑆸॒𑆖𑆳 𑆮॑𑆰𑆛𑇀𑆑𑆸॒𑆠𑇀𑆪𑆁<br\>              𑆱𑆤𑇀𑆣॑𑆠𑇀𑆠𑆁॒ 𑆱𑆤𑇀𑆣𑆵॑𑆪𑆠𑆼 𑆥𑇀𑆫𑆘॒𑆪𑆳 𑆥॒𑆯𑆶𑆨𑆴𑆂 𑇅 𑆪 𑆍॑𑆮𑆁 𑆮𑆼॒𑆢 𑇅<br\>              <br\>              𑇄 𑆩॒𑆲𑆳॒𑆢𑆼॒𑆮𑇀𑆪𑆽 𑆖॑ 𑆮𑆴॒𑆢𑇀𑆩𑆲𑆼॑ 𑆮𑆴𑆰𑇀𑆟𑆶𑆥॒𑆠𑇀𑆤𑆵 𑆖॑ 𑆣𑆵𑆩𑆲𑆴 𑇅<br\>              𑆠𑆤𑇀𑆤𑆾॑ 𑆬𑆑𑇀𑆰𑇀𑆩𑆵𑆂 𑆥𑇀𑆫𑆖𑆾॒𑆢𑆪𑆳᳚𑆠𑇀 𑇆<br\>              <br\>                    𑇆 𑇄 𑆯𑆳𑆤𑇀𑆠𑆴॒𑆂 𑆯𑆳𑆤𑇀𑆠𑆴॒𑆂 𑆯𑆳𑆤𑇀𑆠𑆴॑𑆂 𑇆
             </div>
 
             <div id="Text-Hridaya" class="sharada fontsharada"  style="display:none">
