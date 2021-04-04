@@ -7,7 +7,11 @@
     p { font: 10pt Tahoma; }
     h1 { font: bold 16pt Tahoma; color: #4444cc; margin-bottom: 2px }
     h2 { font: bold 12pt Tahoma; color: #4444cc; }
-    .grantha { font: 18pt Satisar Sharada; color: #4444cc;}
+    @font-face {
+                font-family: 'Satisar Sharada Beta';
+                src: url('./Sharada.ttf');
+            }
+    .grantha { font: 18pt Satisar Sharada Beta; color: #4444cc;}
     table, th, td {
   border: 1px solid black;
   border-collapse: collapse;
