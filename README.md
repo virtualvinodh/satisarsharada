@@ -13,7 +13,7 @@ For reasons known only to Microsoft, Sharada does not render properly in Windows
 
 The SVG glyphs were designed by Sunil Mahnoori of the Core Sharada team. The shapes and forms were largely derived from the various learning materials published by the Core Sharada team.
 
-The font was created by importing SVG glyphs into Fontlab and then post-processing it. As such, the glyphs probably show several artefacts of that automated conversion. We have tried as much as possible to fix the auto-converted Bezier curves and normalize the shapes and strokes as much as possible. But I suppose more could be done to improve on that.
+The font was created by importing SVG glyphs into Fontlab and then post-processing it. As such, the glyphs probably show several artefacts of that automated conversion. We have tried as much as possible to fix the auto-converted Bezier curves and normalize the shapes and strokes. But I suppose more could be done to improve on that.
 
 # Demo
 
