@@ -1,20 +1,19 @@
 <html>
     <head>
         <meta charset="utf-8"/>
-        <script type="text/javascript" src="conjuncts_Sharada_a.json"></script>
-        <script type="text/javascript" src="conjuncts_Sharada_au.json"></script>
-        <script type="text/javascript" src="conjuncts_Sharada_aa.json"></script>
-        <script type="text/javascript" src="conjuncts_Sharada_ah.json"></script>
-        <script type="text/javascript" src="conjuncts_Sharada_am.json"></script>
-        <script type="text/javascript" src="conjuncts_Sharada_e.json"></script>
-        <script type="text/javascript" src="conjuncts_Sharada_r.json"></script>
-        <script type="text/javascript" src="conjuncts_Sharada_u.json"></script>
-        <script type="text/javascript" src="conjuncts_Sharada_uu.json"></script>
-        <script type="text/javascript" src="conjuncts_Sharada_o.json"></script>
-        <script type="text/javascript" src="conjuncts_Sharada_ii.json"></script>
-        <script type="text/javascript" src="conjuncts_Sharada_vir.json"></script>
-
-        <script type="text/javascript" src="conjuncts_Sharada_i.json"></script>
+        <script type="text/javascript" src="./conjuncts/conjuncts_Sharada_a.json"></script>
+        <script type="text/javascript" src="./conjuncts/conjuncts_Sharada_au.json"></script>
+        <script type="text/javascript" src="./conjuncts/conjuncts_Sharada_aa.json"></script>
+        <script type="text/javascript" src="./conjuncts/conjuncts_Sharada_ah.json"></script>
+        <script type="text/javascript" src="./conjuncts/conjuncts_Sharada_am.json"></script>
+        <script type="text/javascript" src="./conjuncts/conjuncts_Sharada_e.json"></script>
+        <script type="text/javascript" src="./conjuncts/conjuncts_Sharada_r.json"></script>
+        <script type="text/javascript" src="./conjuncts/conjuncts_Sharada_u.json"></script>
+        <script type="text/javascript" src="./conjuncts/conjuncts_Sharada_uu.json"></script>
+        <script type="text/javascript" src="./conjuncts/conjuncts_Sharada_o.json"></script>
+        <script type="text/javascript" src="./conjuncts/conjuncts_Sharada_ii.json"></script>
+        <script type="text/javascript" src="./conjuncts/conjuncts_Sharada_vir.json"></script>
+        <script type="text/javascript" src="./conjuncts/conjuncts_Sharada_i.json"></script>
 
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
@@ -37,8 +36,21 @@
     KLC:"en",
     KR:"Europe",
     KRC:"eu",
-    KF:"sharada_unicode_phonetic-1.0.js"
+    KF:"./keyboards/sharada_unicode_phonetic.js"
   });
+
+  kmw.KRS({
+    KN:"sharada_inscript",
+    KI:"Keyboard_sharada_inscript",
+    KL:"sharada_inscript",
+    KLC:"en",
+    KR:"Europe",
+    KRC:"eu",
+    KFont:{family:"Satisar Sharada"},
+    KOskFont:{family:"Satisar Sharada"},
+    KF:"./keyboards/sharada_inscript.js"
+  });
+
   debugKeyboards["sharada_unicode_phonetic"] = {
     id:"sharada_unicode_phonetic",
     version:"1.0"
@@ -212,8 +224,9 @@
               </div>
             <div class="sharada fontsharada" id="input" style="display:none;"/>
                 <textarea> </textarea> <br/>
+                Select Keyboard <br/>
                 <div id="KeymanWebControl" display="block"></div>
-              <p><a href="./keyboard.htm">Keyboard Layout</a></p>
+              <p><a href="./keyboard.htm">Phonetic Keyboard Layout</a></p>
             </div>
 
             <div class="sharada fontsharada" style="display:none;" id="Text-Conjuncts">
