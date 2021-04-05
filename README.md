@@ -15,7 +15,7 @@ The SVG glyphs were designed by Sunil Mahnoori of the Core Sharada team. The sha
 
 # Demo
 
-There is a simple [demo page](https://virtualvinodh.github.io/satisarsharada/testing.html) that demonstrates the font. It also has an integrated phonetic Keyman keyboard under input to enter text in Sharada. The keyboard layout can be found [here](https://virtualvinodh.github.io/satisarsharada/keyboard.html)
+There is a simple [demo page](https://virtualvinodh.github.io/satisarsharada/testing.html) that demonstrates the font. It also has an integrated phonetic Keyman keyboard under input to enter text in Sharada. The keyboard layout can be found [here](https://virtualvinodh.github.io/satisarsharada/keyboard.htm)
 
 If you'd like something with a better UI try [this](https://satisarsharada.appspot.com).
 
