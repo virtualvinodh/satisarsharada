@@ -13,11 +13,19 @@ For reasons known only to Microsoft, Sharada does not render properly in Windows
 
 The SVG glyphs were designed by Sunil Mahnoori of the Core Sharada team. The shapes and forms were largely derived from the various learning materials published by the Core Sharada team.
 
+The font was created by importing SVG glyphs into Fontlab and then post-processing it. As such, the glyphs probably show several artefacts of that automated conversion. We have tried as much as possible to fix the auto-converted Bezier curves and normalize the shapes and strokes as much as possible. But I suppose more could be done to improve on that.
+
 # Demo
 
 There is a simple [demo page](https://virtualvinodh.github.io/satisarsharada/testing.html) that demonstrates the font. It also has an integrated phonetic Keyman keyboard under input to enter text in Sharada. The keyboard layout can be found [here](https://virtualvinodh.github.io/satisarsharada/keyboard.htm)
 
 If you'd like something with a better UI try [this](https://satisarsharada.appspot.com).
+
+# Stylistic Set
+
+Due to extensive stacking, Sharada requires increased interline spacing if the text has 3 or more stacked consonants. So, to reduce that we have added a stylistic set (SS01) that uses compacified glyphs to reduce the interline spacing. A sample text is shown below.
+
+![Satisar Sample](/satisar-compact.png)
 
 # To do
 1. Normalize stroke widths and character forms in general
