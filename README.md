@@ -17,9 +17,13 @@ The font was created by importing SVG glyphs into Fontlab and then post-processi
 
 # Demo
 
-There is a simple [demo page](https://virtualvinodh.github.io/satisarsharada/testing.html) that demonstrates the font. It also has an integrated phonetic Keyman keyboard under input to enter text in Sharada. The keyboard layout can be found [here](https://virtualvinodh.github.io/satisarsharada/keyboard.htm)
+There is a simple [demo page](https://virtualvinodh.github.io/satisarsharada/testing.html) that demonstrates the font. It also has an integrated phonetic Keyman keyboard under input to enter text in Sharada using Phonetic and Inscript layouts. The phonetic keyboard layout can be found [here](https://virtualvinodh.github.io/satisarsharada/keyboard.htm)
 
-If you'd like something with a better UI try [this](https://satisarsharada.appspot.com).
+# Keyboards
+
+You can use [Aksharamukha](https://aksharamukha.appspot.com) to convert text in various format and scripts to Sharada. You can then copy the text from there and set the font to 'Satisar Sharada' in any application that will support Sharada.
+
+If you'd like something simpler aimed at only Sharada try [this](https://satisarsharada.appspot.com). It also has online keyboards to compose in Sharada and links to download offline keyboards.
 
 # Stylistic Set
 
