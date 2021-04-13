@@ -9,7 +9,11 @@ Here is a rendering of the a sample Unicode text in Satisar Sharada & Noto Sans 
 ![Satisar Sample](/satisar-sample.png)
 ![Noto Sample](/noto-sample.png)
 
-For reasons known only to Microsoft, Sharada does not render properly in Windows applications. The GPOS lookups don't work and the resulting rendering is pretty much useless (both with Noto Sans and Satisar). If you're looking for a desktop application try something with Harfbuzz like Libre Office.
+Satisar Sharada does not yet render completely fine in Microsoft applications. The dist feature has some issues and this can result in the resulting rendering having some overlapping syllables. This may have to be fixed manually by inserting a space at the appropriate locations.
+
+![Satisar Sample](/winword-sample.png)
+
+If you're looking for a desktop application, try something with Harfbuzz like Libre Office.
 
 The SVG glyphs were designed by Sunil Mahnoori of the Core Sharada team. The shapes and forms were largely derived from the various learning materials published by the Core Sharada team.
 
