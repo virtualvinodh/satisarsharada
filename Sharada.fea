@@ -201,6 +201,8 @@ feature psts {
     #Note char.top doesn't exist at this point, use shrd-char
 
     sub shrd-ka' [shrd-vs-u shrd-vs-uu shrd-vs-vocr shrd-vs-vocrr] by ka.alt;
+    sub shrd-ka' shrd-nukta [shrd-vs-u shrd-vs-uu shrd-vs-vocr shrd-vs-vocrr] by ka.alt;
+
     sub shrd-nna' [shrd-vs-u shrd-vs-uu shrd-vs-vocr shrd-vs-vocrr] by nna.top;
 
     sub [shrd-gha shrd-nga shrd-nya shrd-ta shrd-da shrd-pa shrd-ha shrd-ssa shrd-ma shrd-bha shrd-nna kssa.top xka] shrd-virama' by virama.alt;
@@ -339,6 +341,10 @@ sub @char.virama shrd-ma by ma.sub;
 sub @char.virama shrd-ya by ya.sub;
 sub @char.virama shrd-ra by ra.sub;
 
+sub @char.virama shrd-ka by ka.sub;
+sub @char.virama shrd-kha by kha.sub;
+sub @char.virama shrd-ga by ga.sub;
+
 sub @char.virama shrd-ra shrd-vs-u by ru.sub;
 sub @char.virama shrd-ra shrd-vs-uu by ruu.sub;
 
@@ -353,7 +359,7 @@ sub @char.virama kssa.alt by kssa.sub;
 sub @char.virama jnya by jnya.sub;
 
 sub ka.sub' @char.subs by ka.alt.sub;
-sub ka.sub' [shrd-vs-u shrd-vs-uu shrd-vs-vocr shrd-vs-vocrr ya.sub ra.sub] by ka.alt.sub;
+sub ka.sub' [shrd-vs-u shrd-vs-uu shrd-vs-vocr shrd-vs-vocrr ya.sub ra.sub ru.sub ruu.sub] by ka.alt.sub;
 sub xka' [@char.subs shrd-vs-u shrd-vs-uu shrd-vs-vocr shrd-vs-vocrr ya.sub ra.sub] by xka.alt;
 
 sub [shrd-ka shrd-kha shrd-ga shrd-gha shrd-ja shrd-na shrd-pa shrd-ma shrd-ya shrd-la shrd-va shrd-sha shrd-ssa shrd-sa shrd-ta] ya.sub' by ya.sub.alt;
@@ -423,11 +429,20 @@ feature blws {
     sub [ka.alt shrd-ga shrd-dda shrd-ta shrd-bha shrd-sha shrd-lla] shrd-vs-u' by vs-u.alt;
     sub [ka.alt shrd-ga shrd-dda shrd-ta shrd-bha shrd-ra shrd-sha shrd-lla] shrd-vs-uu' by vs-uu.alt;
 
+    sub [ka.alt shrd-ga shrd-dda shrd-ta shrd-bha shrd-sha shrd-lla] shrd-nukta shrd-vs-u' by vs-u.alt;
+    sub [ka.alt shrd-ga shrd-dda shrd-ta shrd-bha shrd-ra shrd-sha shrd-lla] shrd-nukta shrd-vs-uu' by vs-uu.alt;
+
     sub [ka.alt.sub ga.sub dda.sub ta.sub bha.sub lla.sub] shrd-vs-u' by vs-u.alt;
     sub [ka.alt.sub.short ga.sub.short dda.sub.short ta.sub.short bha.sub.short lla.sub.short] shrd-vs-u' by vs-u.alt;
 
+    sub [ka.alt.sub ga.sub dda.sub ta.sub bha.sub lla.sub] shrd-nukta shrd-vs-u' by vs-u.alt;
+    sub [ka.alt.sub.short ga.sub.short dda.sub.short ta.sub.short bha.sub.short lla.sub.short] shrd-nukta shrd-vs-u' by vs-u.alt;
+
     sub [ka.alt.sub ga.sub dda.sub ta.sub bha.sub lla.sub] shrd-vs-uu' by vs-uu.alt;
     sub [ka.alt.sub.short ga.sub.short dda.sub.short ta.sub.short bha.sub.short lla.sub.short] shrd-vs-uu' by vs-uu.alt;
+
+    sub [ka.alt.sub ga.sub dda.sub ta.sub bha.sub lla.sub] shrd-nukta shrd-vs-uu' by vs-uu.alt;
+    sub [ka.alt.sub.short ga.sub.short dda.sub.short ta.sub.short bha.sub.short lla.sub.short] shrd-nukta shrd-vs-uu' by vs-uu.alt;
 
     sub [shrd-nya shrd-jha] shrd-vs-u' by vs-u.alt.1;
     sub [shrd-nya shrd-jha] shrd-vs-uu' by vs-uu.alt.1;
@@ -462,7 +477,7 @@ sub shrd-vs-i @char.baseall shrd-chandrabindu' by chandra.alt;
 
 sub shrd-ka' [pa.sub ma.sub sa.sub shrd-vs-vocl] by ka.top.alt3;
 sub shrd-ka' @char.subs by ka.top.alt;
-sub shrd-ka' [ra.sub ya.sub ya.sub.alt ya.sub.short] by ka.alt;
+sub shrd-ka' [ra.sub ya.sub ya.sub.alt ya.sub.short ru.sub ruu.sub] by ka.alt;
 
 sub kssa.alt' [ra.sub ya.sub ya.sub.alt ya.sub.short] by kssa.top;
 sub kssa.alt' @char.subs by kssa.top;
@@ -517,7 +532,6 @@ sub shrd-nna' ya.sub by nna.top;
 sub shrd-nna' ra.sub by nna.top;
 sub shrd-ha' [ya.sub ra.sub shrd-vs-vocr.alt shrd-vs-vocrr.alt] by ha.top; 
 sub nna.top' [shrd-vs-u shrd-vs-uu] by nna.top.alt;
-
 
 } abvs1;
 
