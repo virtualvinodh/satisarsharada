@@ -9,7 +9,7 @@
 @yara.short = [ra.sub ya.sub.short];
 @char.sub.norm = [ka.sub ka.alt.sub kha.sub ga.sub gha.sub nga.sub ca.sub cha.sub ja.sub jha.sub nya.sub tta.sub ttha.sub dda.sub ddha.sub nna.sub ta.sub tha.sub da.sub dha.sub na.sub pa.sub pha.sub ba.sub bha.sub ma.sub ya.sub la.sub lla.sub va.sub sha.sub ssa.sub sa.sub ha.sub jnya.sub];
 @char.otsimp = [ba.top bha.top ca.top chha.top.1 da.top dda.top ddha.top dha.top ga.top gha.top ha.top ja.top jaa jaa.top jha.top jnya jnya.top jnyaa ka.alt.1.2 ka.top.alt ka.top.alt2 ka.top.alt3 kha.top.1 kssa.top la.top ma.top na.top nga.top ngaa ngaa.top nna.top nna.top.alt nnaa nnaa.top nya.top pa.backup pa.top pha.top ra.top rca rdha rga rja rjaa rjha rjnya rjnyaa rkha rsha rnga rngaa rnna rnya rtha ru rva rya sa.top sha.backup sha.top shrd-0 shrd-1 shrd-2 shrd-3 shrd-4 shrd-5 shrd-6 shrd-7 shrd-8 shrd-9 shrd-a shrd-aa shrd-abbr shrd-ai shrd-au shrd-avagr shrd-ba shrd-bha shrd-ca shrd-cha.1 shrd-cont shrd-da shrd-danda shrd-dda shrd-ddanda shrd-ddha shrd-dha shrd-e shrd-ekam shrd-extr-short shrd-ga shrd-gha shrd-ha shrd-head shrd-i shrd-ii shrd-ja shrd-jha shrd-ka shrd-ka.1 shrd-kha.1 shrd-la shrd-lla shrd-ma shrd-na shrd-nna shrd-nya shrd-o shrd-om shrd-pa shrd-pha shrd-prish-e shrd-ra shrd-sa shrd-sandhi shrd-sect shrd-sect-1 shrd-sect-2 shrd-sep shrd-sha shrd-siddh shrd-ssa shrd-ta ta.alt shrd-tha shrd-tta shrd-ttha shrd-u shrd-uu shrd-va shrd-virama shrd-visarga shrd-voc-l shrd-voc-ll shrd-voc-r shrd-voc-rr shrd-vs-aa shrd-vs-au shrd-vs-i shrd-vs-ii shrd-ya space ssa.top ta.top.alt tha.top tta.top ttaa ttaa.top ttha.top u111A1.1 va.top virama.alt vow.sp.3 vow.sp.4 vs-aa.alt vs-ii-alt ya.top];
-@char.distmarks = [shrd-vs-u shrd-vs-uu shrd-vs-vocr shrd-vs-vocrr shrd-vs-vocl shrd-vs-vocll vs-u.alt vs-uu.alt vs-u.alt.1 vs-uu.alt.1 shrd-vs-vocr.alt shrd-vs-vocrr.alt lu.alt luu.alt vow.sp.2 vow.sp.5 ru.sub ruu.sub shrd-vs-o shrd-vs-e shrd-vs-ai shrd-chandrabindu shrd-anusvara shrd-inv-chandra shrd-udatta shrd-svarita shrd-anudatta shrd-kathaka shrd-dot];
+@char.distmarks = [shrd-vs-u shrd-vs-uu shrd-vs-vocr shrd-vs-vocrr shrd-vs-vocl shrd-vs-vocll vs-u.alt vs-uu.alt vs-u.alt.1 vs-uu.alt.1 shrd-vs-vocr.alt shrd-vs-vocrr.alt lu.alt luu.alt vow.sp.2 vow.sp.5 ruu.sub ru.sub shrd-vs-o shrd-vs-e shrd-vs-ai shrd-chandrabindu shrd-anusvara shrd-inv-chandra shrd-udatta shrd-svarita shrd-anudatta shrd-kathaka shrd-dot];
 @otsimpwithout = [ba.top bha.top ca.top chha.top.1 da.top dda.top ddha.top dha.top ga.top gha.top ha.top ja.top jaa jaa.top jha.top jnya jnya.top jnyaa ka.alt.1.2 ka.top.alt ka.top.alt2 ka.top.alt3 kha.top.1 kssa.top la.top ma.top na.top nga.top ngaa ngaa.top nna.top nna.top.alt nnaa nnaa.top nya.top pa.backup pa.top pha.top ra.top rca rdha rga rja rjaa rjha rjnya rjnyaa rkha rsha rnga rngaa rnna rnya rtha ru rva rya sa.top sha.backup sha.top shrd-0 shrd-1 shrd-2 shrd-3 shrd-4 shrd-5 shrd-6 shrd-7 shrd-8 shrd-9 shrd-a shrd-aa shrd-abbr shrd-ai shrd-au shrd-avagr shrd-ba shrd-bha shrd-ca shrd-cha.1 shrd-cont shrd-da shrd-danda shrd-dda shrd-ddanda shrd-ddha shrd-dha shrd-e shrd-ekam shrd-extr-short shrd-ga shrd-gha shrd-ha shrd-head shrd-i shrd-ii shrd-ja shrd-jha shrd-ka shrd-ka.1 shrd-kha.1 shrd-la shrd-lla shrd-ma shrd-na shrd-nna shrd-nya shrd-o shrd-om shrd-pa shrd-pha shrd-prish-e shrd-ra shrd-sa shrd-sandhi shrd-sect shrd-sect-1 shrd-sect-2 shrd-sep shrd-sha shrd-siddh shrd-ssa shrd-ta ta.alt shrd-tha shrd-tta shrd-ttha shrd-u shrd-uu shrd-va shrd-virama shrd-visarga shrd-voc-l shrd-voc-ll shrd-voc-r shrd-voc-rr shrd-vs-i shrd-vs-ii shrd-ya space ssa.top ta.top.alt tha.top tta.top ttaa ttaa.top ttha.top u111A1.1 va.top virama.alt vow.sp.3 vow.sp.4 ya.top];
 @yara = [ra.sub ya.sub ya.sub.alt ya.sub.short ya.sub.short.alt];
 @eai = [shrd-vs-e shrd-vs-ai];
@@ -111,6 +111,9 @@ languagesystem shrd dflt;
 
 
 
+
+
+
 feature akhn {
 # Akhand
 
@@ -155,6 +158,9 @@ lookup psts3;
 #> feature
 #< feature
 } akhn;
+
+
+
 
 
 
@@ -307,6 +313,9 @@ feature psts {
 
 
 
+
+
+
 feature blwf {
 # Below-base Forms
 
@@ -359,13 +368,16 @@ sub @char.virama kssa.alt by kssa.sub;
 sub @char.virama jnya by jnya.sub;
 
 sub ka.sub' @char.subs by ka.alt.sub;
-sub ka.sub' [shrd-vs-u shrd-vs-uu shrd-vs-vocr shrd-vs-vocrr ya.sub ra.sub ru.sub ruu.sub] by ka.alt.sub;
+sub ka.sub' [shrd-vs-u shrd-vs-uu shrd-vs-vocr shrd-vs-vocrr ya.sub ra.sub ruu.sub ru.sub] by ka.alt.sub;
 sub xka' [@char.subs shrd-vs-u shrd-vs-uu shrd-vs-vocr shrd-vs-vocrr ya.sub ra.sub] by xka.alt;
 
 sub [shrd-ka shrd-kha shrd-ga shrd-gha shrd-ja shrd-na shrd-pa shrd-ma shrd-ya shrd-la shrd-va shrd-sha shrd-ssa shrd-sa shrd-ta] ya.sub' by ya.sub.alt;
 sub [ta.sub] ya.sub' by ya.sub.alt;
 
 } blwf;
+
+
+
 
 
 
@@ -468,6 +480,9 @@ feature blws {
 
 
 
+
+
+
 feature abvs {
 # Above-base Forms
 
@@ -477,7 +492,7 @@ sub shrd-vs-i @char.baseall shrd-chandrabindu' by chandra.alt;
 
 sub shrd-ka' [pa.sub ma.sub sa.sub shrd-vs-vocl] by ka.top.alt3;
 sub shrd-ka' @char.subs by ka.top.alt;
-sub shrd-ka' [ra.sub ya.sub ya.sub.alt ya.sub.short ru.sub ruu.sub] by ka.alt;
+sub shrd-ka' [ra.sub ya.sub ya.sub.alt ya.sub.short ruu.sub ru.sub] by ka.alt;
 
 sub kssa.alt' [ra.sub ya.sub ya.sub.alt ya.sub.short] by kssa.top;
 sub kssa.alt' @char.subs by kssa.top;
@@ -552,6 +567,9 @@ lookup abvs3;
 #> feature
 #< feature
 } abvs;
+
+
+
 
 
 
@@ -743,6 +761,9 @@ lookup dist4;
 
 
 
+
+
+
 feature ss01 {
 # Stylistic Set 01–20
 sub @char.sub.norm by @char.sub.short;
@@ -799,6 +820,9 @@ sub jnya' @yara.short by jnya.top;
 #> feature
 #< feature
 } ss01;
+
+
+
 
 
 
