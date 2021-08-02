@@ -4,14 +4,14 @@
 @char.virama = [shrd-virama virama.alt];
 @char.aa = [shrd-vs-aa vs-aa.alt];
 @char.baseall = [shrd-ka shrd-kha shrd-ga shrd-gha shrd-nga shrd-ca shrd-cha shrd-ja shrd-jha shrd-nya shrd-tta shrd-ttha shrd-dda shrd-ddha shrd-nna shrd-ta shrd-tha shrd-da shrd-dha shrd-na shrd-pa shrd-pha shrd-ba shrd-bha shrd-ma shrd-ya shrd-ra shrd-la shrd-lla shrd-va shrd-sha shrd-ssa shrd-sa shrd-ha ka.alt kssa.top kssa.alt jnya rkha rga rnga rca rja rjnya rjha rnya rtha rdha rsha rnna rya rva ngaa jaa ttaa rngaa rjaa rjnyaa ka.top.alt ka.top.alt2 ka.top.alt3 kha.top ga.top gha.top nga.top ca.top cha.top ja.top jha.top nya.top tta.top ttha.top dda.top ddha.top nna.top nna.top.alt ta.top tha.top da.top dha.top na.top pa.top pha.top ba.top bha.top ma.top ya.top ra.top la.top lla.top va.top sha.top ssa.top sa.top ha.top kssa.alt.top jnya.top ka.top.half ga.top.half nga.top.half jha.top.half nya.top.half da.top.half ssa.top.half tta.top.half ta.alt ta.top.alt];
-@char.subs = [ka.sub ka.sub.alt ka.alt.sub kha.sub gha.sub ga.sub nga.sub ca.sub cha.sub ja.sub jha.sub nya.sub tta.sub ttha.sub dda.sub ddha.sub nna.sub ta.sub tha.sub da.sub dha.sub na.sub pa.sub pha.sub ba.sub bha.sub ma.sub la.sub lla.sub va.sub sha.sub ssa.sub sa.sub ha.sub kssa.sub jnya.sub ka.sub.short kha.sub.short ga.sub.short gha.sub.short nga.sub.short ca.sub.short cha.sub.short ja.sub.short jha.sub.short nya.sub.short tta.sub.short ttha.sub.short dda.sub.short ddha.sub.short nna.sub.short ta.sub.short tha.sub.short da.sub.short dha.sub.short na.sub.short pa.sub.short pha.sub.short ba.sub.short bha.sub.short ma.sub.short ya.sub.short la.sub.short lla.sub.short va.sub.short sha.sub.short ssa.sub.short sa.sub.short ha.sub.short jnya.sub.short ga.sub.half kha.sub.half tta.sub.half shrd-vs-vocl shrd-vs-vocll];
-@char.sub.short = [ka.sub.short ka.alt.sub.short kha.sub.short ga.sub.short gha.sub.short nga.sub.short ca.sub.short cha.sub.short ja.sub.short jha.sub.short nya.sub.short tta.sub.short ttha.sub.short dda.sub.short ddha.sub.short nna.sub.short ta.sub.short tha.sub.short da.sub.short dha.sub.short na.sub.short pa.sub.short pha.sub.short ba.sub.short bha.sub.short ma.sub.short ya.sub.short la.sub.short lla.sub.short va.sub.short sha.sub.short ssa.sub.short sa.sub.short ha.sub.short jnya.sub.short];
-@yara.short = [ra.sub ya.sub.short];
-@char.sub.norm = [ka.sub ka.alt.sub kha.sub ga.sub gha.sub nga.sub ca.sub cha.sub ja.sub jha.sub nya.sub tta.sub ttha.sub dda.sub ddha.sub nna.sub ta.sub tha.sub da.sub dha.sub na.sub pa.sub pha.sub ba.sub bha.sub ma.sub ya.sub la.sub lla.sub va.sub sha.sub ssa.sub sa.sub ha.sub jnya.sub];
+@char.subs = [ka.sub ka.sub.alt ka.alt.sub kha.sub gha.sub ga.sub nga.sub ca.sub cha.sub ja.sub jha.sub nya.sub tta.sub ttha.sub dda.sub ddha.sub nna.sub ta.sub tha.sub da.sub dha.sub na.sub pa.sub pha.sub ba.sub bha.sub ma.sub la.sub lla.sub va.sub sha.sub ssa.sub sa.sub ha.sub kssa.sub jnya.sub ka.sub.short kha.sub.short ga.sub.short gha.sub.short nga.sub.short ca.sub.short cha.sub.short ja.sub.short jha.sub.short nya.sub.short tta.sub.short ttha.sub.short dda.sub.short ddha.sub.short nna.sub.short ta.sub.short tha.sub.short da.sub.short dha.sub.short na.sub.short pa.sub.short pha.sub.short ba.sub.short bha.sub.short ma.sub.short ya.sub.short la.sub.short lla.sub.short va.sub.short sha.sub.short ssa.sub.short sa.sub.short ha.sub.short jnya.sub.short ga.sub.half kha.sub.half tta.sub.half shrd-vs-vocl shrd-vs-vocll ka.nukta.sub ka.alt.nukta.sub kha.nukta.sub ga.nukta.sub ca.nukta.sub ja.nukta.sub na.nukta.sub pha.nukta.sub lla.nukta.sub ka.nukta.sub.short ka.alt.nukta.sub.short kha.sub.nukta.short ga.sub.nukta.short ca.sub.nukta.short ja.sub.nukta.short na.sub.nukta.short pha.sub.nukta.short lla.sub.nukta.short];
+@char.sub.short = [ka.sub.short ka.alt.sub.short kha.sub.short ga.sub.short gha.sub.short nga.sub.short ca.sub.short cha.sub.short ja.sub.short jha.sub.short nya.sub.short tta.sub.short ttha.sub.short dda.sub.short ddha.sub.short nna.sub.short ta.sub.short tha.sub.short da.sub.short dha.sub.short na.sub.short pa.sub.short pha.sub.short ba.sub.short bha.sub.short ma.sub.short ya.sub.short la.sub.short lla.sub.short va.sub.short sha.sub.short ssa.sub.short sa.sub.short ha.sub.short jnya.sub.short ka.nukta.sub.short ka.alt.nukta.sub.short kha.sub.nukta.short ga.sub.nukta.short ca.sub.nukta.short ja.sub.nukta.short na.sub.nukta.short pha.sub.nukta.short ya.sub.nukta.short ya.sub.nukta.short.alt lla.sub.nukta.short];
+@yara.short = [ra.sub ya.sub.short ya.sub.nukta.short];
+@char.sub.norm = [ka.sub ka.alt.sub kha.sub ga.sub gha.sub nga.sub ca.sub cha.sub ja.sub jha.sub nya.sub tta.sub ttha.sub dda.sub ddha.sub nna.sub ta.sub tha.sub da.sub dha.sub na.sub pa.sub pha.sub ba.sub bha.sub ma.sub ya.sub la.sub lla.sub va.sub sha.sub ssa.sub sa.sub ha.sub jnya.sub ka.nukta.sub ka.alt.nukta.sub kha.nukta.sub ga.nukta.sub ca.nukta.sub ja.nukta.sub na.nukta.sub pha.nukta.sub ya.nukta.sub ya.nukta.sub.alt lla.nukta.sub];
 @char.otsimp = [ba.top bha.top ca.top chha.top.1 da.top dda.top ddha.top dha.top ga.top gha.top ha.top ja.top jaa jaa.top jha.top jnya jnya.top jnyaa ka.alt.1.2 ka.top.alt ka.top.alt2 ka.top.alt3 kha.top.1 kssa.top la.top ma.top na.top nga.top ngaa ngaa.top nna.top nna.top.alt nnaa nnaa.top nya.top pa.backup pa.top pha.top ra.top rca rdha rga rja rjaa rjha rjnya rjnyaa rkha rsha rnga rngaa rnna rnya rtha ru rva rya sa.top sha.backup sha.top shrd-0 shrd-1 shrd-2 shrd-3 shrd-4 shrd-5 shrd-6 shrd-7 shrd-8 shrd-9 shrd-a shrd-aa shrd-abbr shrd-ai shrd-au shrd-avagr shrd-ba shrd-bha shrd-ca shrd-cha.1 shrd-cont shrd-da shrd-danda shrd-dda shrd-ddanda shrd-ddha shrd-dha shrd-e shrd-ekam shrd-extr-short shrd-ga shrd-gha shrd-ha shrd-head shrd-i shrd-ii shrd-ja shrd-jha shrd-ka shrd-ka.1 shrd-kha.1 shrd-la shrd-lla shrd-ma shrd-na shrd-nna shrd-nya shrd-o shrd-om shrd-pa shrd-pha shrd-prish-e shrd-ra shrd-sa shrd-sandhi shrd-sect shrd-sect-1 shrd-sect-2 shrd-sep shrd-sha shrd-siddh shrd-ssa shrd-ta ta.alt shrd-tha shrd-tta shrd-ttha shrd-u shrd-uu shrd-va shrd-virama shrd-visarga shrd-voc-l shrd-voc-ll shrd-voc-r shrd-voc-rr shrd-vs-aa shrd-vs-au shrd-vs-i shrd-vs-ii shrd-ya space ssa.top ta.top.alt tha.top tta.top ttaa ttaa.top ttha.top u111A1.1 va.top virama.alt vow.sp.3 vow.sp.4 vs-aa.alt vs-ii-alt ya.top];
 @char.distmarks = [shrd-vs-u shrd-vs-uu shrd-vs-vocr shrd-vs-vocrr shrd-vs-vocl shrd-vs-vocll vs-u.alt vs-uu.alt vs-u.alt.1 vs-uu.alt.1 shrd-vs-vocr.alt shrd-vs-vocrr.alt lu.alt luu.alt vow.sp.2 vow.sp.5 ruu.sub ru.sub shrd-vs-o shrd-vs-e shrd-vs-ai shrd-chandrabindu shrd-anusvara shrd-inv-chandra shrd-udatta shrd-svarita shrd-anudatta shrd-kathaka shrd-dot];
 @otsimpwithout = [ba.top bha.top ca.top chha.top.1 da.top dda.top ddha.top dha.top ga.top gha.top ha.top ja.top jaa jaa.top jha.top jnya jnya.top jnyaa ka.alt.1.2 ka.top.alt ka.top.alt2 ka.top.alt3 kha.top.1 kssa.top la.top ma.top na.top nga.top ngaa ngaa.top nna.top nna.top.alt nnaa nnaa.top nya.top pa.backup pa.top pha.top ra.top rca rdha rga rja rjaa rjha rjnya rjnyaa rkha rsha rnga rngaa rnna rnya rtha ru rva rya sa.top sha.backup sha.top shrd-0 shrd-1 shrd-2 shrd-3 shrd-4 shrd-5 shrd-6 shrd-7 shrd-8 shrd-9 shrd-a shrd-aa shrd-abbr shrd-ai shrd-au shrd-avagr shrd-ba shrd-bha shrd-ca shrd-cha.1 shrd-cont shrd-da shrd-danda shrd-dda shrd-ddanda shrd-ddha shrd-dha shrd-e shrd-ekam shrd-extr-short shrd-ga shrd-gha shrd-ha shrd-head shrd-i shrd-ii shrd-ja shrd-jha shrd-ka shrd-ka.1 shrd-kha.1 shrd-la shrd-lla shrd-ma shrd-na shrd-nna shrd-nya shrd-o shrd-om shrd-pa shrd-pha shrd-prish-e shrd-ra shrd-sa shrd-sandhi shrd-sect shrd-sect-1 shrd-sect-2 shrd-sep shrd-sha shrd-siddh shrd-ssa shrd-ta ta.alt shrd-tha shrd-tta shrd-ttha shrd-u shrd-uu shrd-va shrd-virama shrd-visarga shrd-voc-l shrd-voc-ll shrd-voc-r shrd-voc-rr shrd-vs-i shrd-vs-ii shrd-ya space ssa.top ta.top.alt tha.top tta.top ttaa ttaa.top ttha.top u111A1.1 va.top virama.alt vow.sp.3 vow.sp.4 ya.top];
-@yara = [ra.sub ya.sub ya.sub.alt ya.sub.short ya.sub.short.alt];
+@yara = [ra.sub ya.sub ya.sub.alt ya.sub.short ya.sub.short.alt ya.nukta.sub ya.nukta.sub.alt ya.sub.nukta.short ya.sub.nukta.short.alt];
 @eai = [shrd-vs-e shrd-vs-ai];
 @rightjoining = [kha.top gha.top dda.top ddha.top tha.top da.top na.top pa.top ma.top ya.top va.top ssa.top];
 @rightjoininghalf = [ka.top.alt ka.top.alt2 ka.top.alt3 ga.top nga.top ca.top cha.top ja.top jha.top nya.top tta.top ttha.top ta.top dha.top ba.top bha.top ra.top la.top lla.top va.top sha.top sa.top];
@@ -21,35 +21,36 @@
 @rightprotrudinghalfshort = [nna.sub.short bha.sub.short ttha.sub.short tha.sub.short];
 @rightvocr = [shrd-kha shrd-gha shrd-dda shrd-ddha shrd-tha shrd-da shrd-na shrd-pa shrd-ma shrd-ya shrd-va shrd-ssa];
 @rightvocrhalf = [shrd-sa shrd-ga];
+@nuktashard = [shrd-nukta];
 #/< otclasses
 
 #/> tags
-@char.simpwithoutaaiiauvirama = [ba.top bha.top ca.top cha.top chha.top.1 da.top da.top.half dda.top ddha.top dha.top ga.top ga.top.half gha.top ha.top ja.top jaa jaa.top jha.top jha.top.half jnya jnya.top jnyaa jnyaa.top ka.alt ka.alt.1.2 ka.top.alt ka.top.alt.2 ka.top.alt2 ka.top.alt3 ka.top.half kha.top kha.top.1 kru kruu kssa.alt kssa.alt.top kssa.top la.top lla.top ma.top na.top nga.top nga.top.half ngaa ngaa.top nna.top nna.top.alt nnaa nnaa.top nya.top nya.top.half pa.backup pa.top pha.top ra.top rca rdha rga rja rjaa rjha rjnya rjnyaa rkha rnga rngaa rnna rnya rsha rtha ru rva rya sa.top sha.backup sha.top shrd-0 shrd-1 shrd-2 shrd-3 shrd-4 shrd-5 shrd-6 shrd-7 shrd-8 shrd-9 shrd-a shrd-aa shrd-aa.1 shrd-abbr shrd-ai shrd-au shrd-avagr shrd-ba shrd-bha shrd-ca shrd-cha shrd-cha.1 shrd-cont shrd-da shrd-danda shrd-dda shrd-ddanda shrd-ddha shrd-dha shrd-e shrd-ekam shrd-extr-short shrd-ga shrd-gha shrd-ha shrd-head shrd-i shrd-ii shrd-ja shrd-jha shrd-ka shrd-ka.1 shrd-kha shrd-kha.1 shrd-la shrd-lla shrd-ma shrd-na shrd-nga shrd-nna shrd-nya shrd-o shrd-om shrd-pa shrd-pha shrd-prish-e shrd-ra shrd-sa shrd-sandhi shrd-sect shrd-sect-1 shrd-sect-2 shrd-sep shrd-sha shrd-siddh shrd-ssa shrd-ta shrd-tha shrd-tta shrd-ttha shrd-u shrd-uu shrd-va shrd-voc-l shrd-voc-ll shrd-voc-r shrd-voc-rr shrd-vs-i shrd-vs-i.alt shrd-vs-i.short shrd-ya space ssa.top ssa.top.half ta.alt ta.top ta.top.alt tha.top tta.sub.half tta.top tta.top.half ttaa ttaa.top ttha.top va.top vow.sp.3 vow.sp.4 xka xka.alt xkha ya.top];
-@char.simpwithouti = [ba.top bha.top ca.top cha.top chha.top.1 da.top da.top.half dda.top ddha.top dha.top ga.top ga.top.half gha.top ha.top ja.top jaa jaa.top jha.top jha.top.half jnya jnya.top jnyaa jnyaa.top ka.alt ka.alt.1.2 ka.top.alt ka.top.alt.2 ka.top.alt2 ka.top.alt3 ka.top.half kha.top kha.top.1 kru kruu kssa.alt kssa.alt.top kssa.top la.top lla.top ma.top na.top nga.top nga.top.half ngaa ngaa.top nna.top nna.top.alt nnaa nnaa.top nya.top nya.top.half pa.backup pa.top pha.top ra.top rca rdha rga rja rjaa rjha rjnya rjnyaa rkha rnga rngaa rnna rnya rsha rtha ru rva rya sa.top sha.backup sha.top shrd-0 shrd-1 shrd-2 shrd-3 shrd-4 shrd-5 shrd-6 shrd-7 shrd-8 shrd-9 shrd-a shrd-aa shrd-aa.1 shrd-abbr shrd-ai shrd-au shrd-avagr shrd-ba shrd-bha shrd-ca shrd-cha shrd-cha.1 shrd-cont shrd-da shrd-danda shrd-dda shrd-ddanda shrd-ddha shrd-dha shrd-e shrd-ekam shrd-extr-short shrd-ga shrd-gha shrd-ha shrd-head shrd-i shrd-ii shrd-ja shrd-jha shrd-ka shrd-ka.1 shrd-kha shrd-kha.1 shrd-la shrd-lla shrd-ma shrd-na shrd-nga shrd-nna shrd-nya shrd-o shrd-om shrd-pa shrd-pha shrd-ra shrd-sa shrd-sandhi shrd-sect shrd-sect-1 shrd-sect-2 shrd-sep shrd-sha shrd-siddh shrd-ssa shrd-ta shrd-tha shrd-tta shrd-ttha shrd-u shrd-uu shrd-va shrd-virama shrd-visarga shrd-voc-l shrd-voc-ll shrd-voc-r shrd-voc-rr shrd-vs-aa shrd-vs-au shrd-vs-ii shrd-ya space ssa.top ssa.top.half ta.alt ta.top ta.top.alt tha.top tta.top tta.top.half ttaa ttaa.top ttha.top va.top virama.alt vow.sp.3 vow.sp.4 vs-aa.alt vs-ii-alt xka xka.alt xkha ya.top];
+@char.simpwithoutaaiiauvirama = [ba.top bha.top ca.top cha.top chha.top.1 da.top da.top.half dda.top ddha.top dha.top ga.top ga.top.half gha.top ha.top ja.top jaa jaa.top jha.top jha.top.half jnya jnya.top jnyaa jnyaa.top ka.alt ka.alt.1.2 ka.top.alt ka.top.alt.2 ka.top.alt2 ka.top.alt3 ka.top.half kha.top kha.top.1 kru kruu kssa.alt kssa.alt.top kssa.top la.top lla.top ma.top na.top nga.top nga.top.half ngaa ngaa.top nna.top nna.top.alt nnaa nnaa.top nya.top nya.top.half pa.backup pa.top pha.top ra.top rca rdha rga rja rjaa rjha rjnya rjnyaa rkha rnga rngaa rnna rnya rsha rtha ru rva rya sa.top sha.backup sha.top shrd-0 shrd-1 shrd-2 shrd-3 shrd-4 shrd-5 shrd-6 shrd-7 shrd-8 shrd-9 shrd-a shrd-aa shrd-aa.1 shrd-abbr shrd-ai shrd-au shrd-avagr shrd-ba shrd-bha shrd-ca shrd-cha shrd-cha.1 shrd-cont shrd-da shrd-danda shrd-dda shrd-ddanda shrd-ddha shrd-dha shrd-e shrd-ekam shrd-extr-short shrd-ga shrd-gha shrd-ha shrd-head shrd-i shrd-ii shrd-ja shrd-jha shrd-ka shrd-ka.1 shrd-kha shrd-kha.1 shrd-la shrd-lla shrd-ma shrd-na shrd-nga shrd-nna shrd-nya shrd-o shrd-om shrd-pa shrd-pha shrd-prish-e shrd-ra shrd-sa shrd-sandhi shrd-sect shrd-sect-1 shrd-sect-2 shrd-sep shrd-sha shrd-siddh shrd-ssa shrd-ta shrd-tha shrd-tta shrd-ttha shrd-u shrd-uu shrd-va shrd-voc-l shrd-voc-ll shrd-voc-r shrd-voc-rr shrd-vs-i shrd-vs-i.alt shrd-vs-i.short shrd-ya space ssa.top ssa.top.half ta.alt ta.top ta.top.alt tha.top tta.sub.half tta.top tta.top.half ttaa ttaa.top ttha.top va.top vow.sp.4 xka xka.alt xkha ya.top];
+@char.simpwithouti = [ba.top bha.top ca.top cha.top chha.top.1 da.top da.top.half dda.top ddha.top dha.top ga.top ga.top.half gha.top ha.top ja.top jaa jaa.top jha.top jha.top.half jnya jnya.top jnyaa jnyaa.top ka.alt ka.alt.1.2 ka.top.alt ka.top.alt.2 ka.top.alt2 ka.top.alt3 ka.top.half kha.top kha.top.1 kru kruu kssa.alt kssa.alt.top kssa.top la.top lla.top ma.top na.top nga.top nga.top.half ngaa ngaa.top nna.top nna.top.alt nnaa nnaa.top nya.top nya.top.half pa.backup pa.top pha.top ra.top rca rdha rga rja rjaa rjha rjnya rjnyaa rkha rnga rngaa rnna rnya rsha rtha ru rva rya sa.top sha.backup sha.top shrd-0 shrd-1 shrd-2 shrd-3 shrd-4 shrd-5 shrd-6 shrd-7 shrd-8 shrd-9 shrd-a shrd-aa shrd-aa.1 shrd-abbr shrd-ai shrd-au shrd-avagr shrd-ba shrd-bha shrd-ca shrd-cha shrd-cha.1 shrd-cont shrd-da shrd-danda shrd-dda shrd-ddanda shrd-ddha shrd-dha shrd-e shrd-ekam shrd-extr-short shrd-ga shrd-gha shrd-ha shrd-head shrd-i shrd-ii shrd-ja shrd-jha shrd-ka shrd-ka.1 shrd-kha shrd-kha.1 shrd-la shrd-lla shrd-ma shrd-na shrd-nga shrd-nna shrd-nya shrd-o shrd-om shrd-pa shrd-pha shrd-ra shrd-sa shrd-sandhi shrd-sect shrd-sect-1 shrd-sect-2 shrd-sep shrd-sha shrd-siddh shrd-ssa shrd-ta shrd-tha shrd-tta shrd-ttha shrd-u shrd-uu shrd-va shrd-virama shrd-visarga shrd-voc-l shrd-voc-ll shrd-voc-r shrd-voc-rr shrd-vs-aa shrd-vs-aa.vow-mod shrd-vs-au shrd-vs-ii shrd-ya space ssa.top ssa.top.half ta.alt ta.top ta.top.alt tha.top tta.top tta.top.half ttaa ttaa.top ttha.top va.top virama.alt vow.sp.4 vs-aa.alt vs-ii-alt xka xka.alt xkha ya.top];
 #/< tags
 
 #/> vtags
-@ALL = [A AE Aacute Acircumflex Adieresis Agrave Aring Atilde B C CR Ccedilla D E Eacute Ecircumflex Edieresis Egrave Eth F G H I Iacute Icircumflex Idieresis Igrave J K L M N Ntilde O Oacute Ocircumflex Odieresis Ograve Oslash Otilde P Q R S T Thorn U Uacute Ucircumflex Udieresis Ugrave V W X Y Yacute Z a aacute acircumflex adieresis ae agrave ai-sign.alt aring asciicircum asciitilde asterisk atilde au.alt b ba.sub ba.sub.short ba.top backslash bar bha.sub bha.sub.short bha.top braceleft braceright bracketleft bracketright c ca.sub ca.sub.short ca.top candrabinduhalant-deva ccedilla cha.sub cha.sub.short cha.top chandra.alt chha.sub.1 chha.top.1 circledotted colon comma d da.sub da.sub.short da.top da.top.half dda.sub dda.sub.short dda.top ddha.sub ddha.sub.short ddha.top dha.sub dha.sub.short dha.top divide e e-sign.alt eacute ecircumflex edieresis egrave eight ellipsis emdash endash equal eth exclam f five four g ga.sub ga.sub.half ga.sub.short ga.top ga.top.half germandbls gha.sub gha.sub.short gha.top greater h ha.sub ha.sub.short ha.top hyphen i iacute icircumflex idieresis igrave j ja.sub ja.sub.short ja.top jaa jaa.top jha.sub jha.sub.short jha.top jha.top.half jhaa.top.half jnya jnya.sub jnya.sub.short jnya.top jnyaa jnyaa.top k ka.alt ka.alt.1.2 ka.alt.sub ka.alt.sub.short ka.sub ka.sub.alt ka.sub.alt.1 ka.sub.short ka.sub.short.1 ka.top.alt ka.top.alt.2 ka.top.alt2 ka.top.alt3 ka.top.half kha.sub kha.sub.half kha.sub.half.1 kha.sub.half.2 kha.sub.short kha.top kha.top.1 kru kruu kssa.alt kssa.alt.1 kssa.alt.top kssa.new kssa.sub kssa.sub.short kssa.sub.short.1 kssa.top ksssa l la.sub la.sub.short la.top less lla.sub lla.sub.short lla.top lu.alt luu.alt m ma.sub ma.sub.short ma.top minus multiply n na.sub na.sub.short na.top nga.sub nga.sub.short nga.top nga.top.half ngaa ngaa.top ngaa.top.half nine nja.top nna.sub nna.sub.short nna.top nna.top.alt nnaa nnaa.top ntilde numbersign nya.sub nya.sub.short nya.top nya.top.half o oacute ocircumflex odieresis ograve one ordfeminine ordmasculine oslash otilde p pa.backup pa.sub pa.sub.1 pa.sub.short pa.sub.short.1 pa.top parenleft parenright percent period pha.sub pha.sub.short pha.top plus q question quotedbl quotedblleft quotedblright quoteleft quoteright quotesingle r ra.sub ra.sub.1 ra.sub.2 ra.top rca rdha rga rja rjaa rjha rjnya rjnyaa rkha rnga rngaa rnna rnya rsha rtha ru ru.sub ruu.sub rva rya s sa.sub sa.sub.short sa.top semicolon seven sha.backup sha.sub sha.sub.short sha.top sharda-vow-mod shrd-0 shrd-1 shrd-2 shrd-3 shrd-4 shrd-5 shrd-6 shrd-7 shrd-8 shrd-9 shrd-a shrd-aa shrd-aa.1 shrd-abbr shrd-ai shrd-anudatta shrd-anusvara shrd-au shrd-avagr shrd-ba shrd-bha shrd-ca shrd-cha shrd-cha.1 shrd-chandrabindu shrd-cont shrd-da shrd-danda shrd-dda shrd-ddanda shrd-ddha shrd-dha shrd-dot shrd-e shrd-ekam shrd-extr-short shrd-ga shrd-gha shrd-ha shrd-head shrd-i shrd-ii shrd-inv-chandra shrd-ja shrd-jha shrd-jihva shrd-ka shrd-ka.1 shrd-kathaka shrd-kha shrd-kha.1 shrd-la shrd-lla shrd-ma shrd-na shrd-nga shrd-nga.1 shrd-nna shrd-nukta shrd-nya shrd-o shrd-om shrd-pa shrd-pha shrd-prish-e shrd-ra shrd-sa shrd-sandhi shrd-sect shrd-sect-1 shrd-sect-2 shrd-sep shrd-sha shrd-siddh shrd-ssa shrd-svarita shrd-ta shrd-tha shrd-tta shrd-ttha shrd-u shrd-udatta shrd-upadh shrd-uu shrd-va shrd-virama shrd-visarga shrd-voc-l shrd-voc-ll shrd-voc-r shrd-voc-rr shrd-vs-aa shrd-vs-ai shrd-vs-au shrd-vs-e shrd-vs-i shrd-vs-i.alt shrd-vs-i.short shrd-vs-ii shrd-vs-o shrd-vs-u shrd-vs-uu shrd-vs-vocl shrd-vs-vocll shrd-vs-vocr shrd-vs-vocr.alt shrd-vs-vocrr shrd-vs-vocrr.alt shrd-ya six slash space ssa.sub ssa.sub.short ssa.top ssa.top.half t ta.alt ta.sub ta.sub.short ta.sub.short.1 ta.sub.short.2 ta.top ta.top.alt tha.sub tha.sub.short tha.top thorn three tta.sub tta.sub.half tta.sub.short tta.top tta.top.half ttaa ttaa.top ttha.sub ttha.sub.short ttha.top two u u111A1.1 uacute ucircumflex udieresis ugrave underscore uni00B2 uni00B3 v va.sub va.sub.1 va.sub.2 va.sub.short va.top virama.alt vow.sp.1 vow.sp.2 vow.sp.3 vow.sp.4 vow.sp.5 vow.sp.6 vs-aa.alt vs-ii-alt vs-u.alt vs-u.alt.1 vs-uu.alt vs-uu.alt.1 w x xka xka.alt xkha y ya.sub ya.sub.alt ya.sub.short ya.sub.short.alt ya.top yacute ydieresis z zero zerowidthjoiner zerowidthnonjoiner];
+@ALL = [A AE Aacute Acircumflex Adieresis Agrave Aring Atilde B C CR Ccedilla D E Eacute Ecircumflex Edieresis Egrave Eth F G H I Iacute Icircumflex Idieresis Igrave J K L M N Ntilde O Oacute Ocircumflex Odieresis Ograve Oslash Otilde P Q R S T Thorn U Uacute Ucircumflex Udieresis Ugrave V W X Y Yacute Z a aacute acircumflex adieresis ae agrave ai-sign.alt aring asciicircum asciitilde asterisk atilde au.alt b ba.sub ba.sub.short ba.top backslash bar bha.sub bha.sub.short bha.top braceleft braceright bracketleft bracketright c ca.nukta.sub ca.sub ca.sub.nukta.short ca.sub.short ca.top candrabinduhalant-deva ccedilla cha.sub cha.sub.short cha.top chandra.alt chha.sub.1 chha.top.1 circledotted colon comma d da.sub da.sub.short da.top da.top.half dda.sub dda.sub.short dda.top ddha.sub ddha.sub.short ddha.top dha.sub dha.sub.short dha.top divide dummy.1 e e-sign.alt eacute ecircumflex edieresis egrave eight ellipsis emdash endash equal eth exclam f five four g ga.nukta.sub ga.sub ga.sub.half ga.sub.nukta.short ga.sub.short ga.top ga.top.half germandbls gha.sub gha.sub.short gha.top greater h ha.sub ha.sub.short ha.top hyphen i iacute icircumflex idieresis igrave j ja.nukta.sub ja.sub ja.sub.nukta.short ja.sub.short ja.top jaa jaa.top jha.sub jha.sub.short jha.top jha.top.half jhaa.top.half jnya jnya.sub jnya.sub.short jnya.top jnyaa jnyaa.top k ka.alt ka.alt.1.2 ka.alt.nukta.sub ka.alt.nukta.sub.short ka.alt.sub ka.alt.sub.short ka.nukta.sub ka.nukta.sub.short ka.sub ka.sub.alt ka.sub.alt.1 ka.sub.short ka.sub.short.1 ka.top.alt ka.top.alt.2 ka.top.alt2 ka.top.alt3 ka.top.half kha.nukta.sub kha.sub kha.sub.half kha.sub.half.1 kha.sub.half.2 kha.sub.nukta.short kha.sub.short kha.top kha.top.1 kru kruu kssa.alt kssa.alt.1 kssa.alt.top kssa.new kssa.sub kssa.sub.short kssa.sub.short.1 kssa.top ksssa l la.sub la.sub.short la.top less lla.nukta.sub lla.sub lla.sub.nukta.short lla.sub.short lla.top lu.alt luu.alt m ma.sub ma.sub.short ma.top minus multiply n na.nukta.sub na.sub na.sub.nukta.short na.sub.short na.top nga.sub nga.sub.short nga.top nga.top.half ngaa ngaa.top ngaa.top.half nine nja.top nna.sub nna.sub.short nna.top nna.top.alt nnaa nnaa.top ntilde numbersign nya.sub nya.sub.short nya.top nya.top.half o oacute ocircumflex odieresis ograve one ordfeminine ordmasculine oslash otilde p pa.backup pa.sub pa.sub.1 pa.sub.short pa.sub.short.1 pa.top parenleft parenright percent period pha.nukta.sub pha.sub pha.sub.nukta.short pha.sub.short pha.top plus q question quotedbl quotedblleft quotedblright quoteleft quoteright quotesingle r ra.sub ra.sub.1 ra.sub.2 ra.top rca rdha rga rja rjaa rjha rjnya rjnyaa rkha rnga rngaa rnna rnya rsha rtha ru ru.sub ruu.sub rva rya s sa.sub sa.sub.short sa.top semicolon seven sha.backup sha.sub sha.sub.short sha.top sharda-vow-mod shrd-0 shrd-1 shrd-2 shrd-3 shrd-4 shrd-5 shrd-6 shrd-7 shrd-8 shrd-9 shrd-a shrd-aa shrd-aa.1 shrd-abbr shrd-ai shrd-anudatta shrd-anusvara shrd-au shrd-avagr shrd-ba shrd-bha shrd-ca shrd-cha shrd-cha.1 shrd-chandrabindu shrd-cont shrd-da shrd-danda shrd-dda shrd-ddanda shrd-ddha shrd-dha shrd-dot shrd-e shrd-ekam shrd-extr-short shrd-ga shrd-gha shrd-ha shrd-head shrd-i shrd-ii shrd-inv-chandra shrd-ja shrd-jha shrd-jihva shrd-ka shrd-ka.1 shrd-kathaka shrd-kha shrd-kha.1 shrd-la shrd-lla shrd-ma shrd-na shrd-nga shrd-nga.1 shrd-nna shrd-nukta shrd-nya shrd-o shrd-om shrd-pa shrd-pha shrd-prish-e shrd-ra shrd-sa shrd-sandhi shrd-sect shrd-sect-1 shrd-sect-2 shrd-sep shrd-sha shrd-siddh shrd-ssa shrd-svarita shrd-ta shrd-tha shrd-tta shrd-ttha shrd-u shrd-udatta shrd-upadh shrd-uu shrd-va shrd-virama shrd-visarga shrd-voc-l shrd-voc-ll shrd-voc-r shrd-voc-rr shrd-vs-aa shrd-vs-aa.vow-mod shrd-vs-ai shrd-vs-au shrd-vs-e shrd-vs-i shrd-vs-i.alt shrd-vs-i.short shrd-vs-ii shrd-vs-o shrd-vs-u shrd-vs-uu shrd-vs-vocl shrd-vs-vocll shrd-vs-vocr shrd-vs-vocr.alt shrd-vs-vocrr shrd-vs-vocrr.alt shrd-ya six slash space ssa.sub ssa.sub.short ssa.top ssa.top.half t ta.alt ta.sub ta.sub.short ta.sub.short.1 ta.sub.short.2 ta.top ta.top.alt tha.sub tha.sub.short tha.top thorn three tta.sub tta.sub.half tta.sub.short tta.top tta.top.half ttaa ttaa.top ttha.sub ttha.sub.short ttha.top two u u111A1.1 uacute ucircumflex udieresis ugrave underscore uni00B2 uni00B3 v va.sub va.sub.1 va.sub.2 va.sub.short va.top virama.alt vow.sp.1 vow.sp.2 vow.sp.3 vow.sp.4 vow.sp.5 vow.sp.6 vs-aa.alt vs-ii-alt vs-u.alt vs-u.alt.1 vs-uu.alt vs-uu.alt.1 w x xka xka.alt xkha y ya.nukta.sub ya.nukta.sub.alt ya.sub ya.sub.alt ya.sub.nukta.short ya.sub.nukta.short.alt ya.sub.short ya.sub.short.alt ya.top yacute ydieresis z zero zerowidthjoiner zerowidthnonjoiner];
 @Bos = [C Ccedilla G J O Oacute Ocircumflex Odieresis Ograve Oslash Otilde Q S U Uacute Ucircumflex Udieresis Ugrave];
 @Tos = [C Ccedilla G O Oacute Ocircumflex Odieresis Ograve Oslash Otilde Q S];
 @asc = [b d eth f germandbls h k l thorn];
-@blank = [CR jhaa.top.half jnyaa.top kssa.new kssa.sub.short.1 ngaa.top.half nja.top shrd-nga.1 space zerowidthjoiner zerowidthnonjoiner];
+@blank = [CR dummy.1 jhaa.top.half jnyaa.top kssa.new kssa.sub.short.1 ngaa.top.half nja.top shrd-nga.1 space zerowidthjoiner zerowidthnonjoiner];
 @bos = [a aacute acircumflex adieresis ae agrave aring atilde b c ccedilla d e eacute ecircumflex edieresis egrave eth g germandbls o oacute ocircumflex odieresis ograve ordfeminine ordmasculine oslash otilde p q s t thorn u uacute ucircumflex udieresis ugrave];
-@color = [dha.sub dha.sub.short kru kruu rjha rnya ru.sub ruu.sub shrd-ca tha.sub tha.sub.short ya.sub ya.sub.alt];
-@cyrl = [ha.sub ha.sub.short ha.top ka.alt ka.alt.1.2 ka.alt.sub ka.alt.sub.short ka.sub ka.sub.alt ka.sub.alt.1 ka.sub.short ka.sub.short.1 ka.top.alt ka.top.alt.2 ka.top.alt2 ka.top.alt3 ka.top.half kha.sub kha.sub.half kha.sub.half.1 kha.sub.half.2 kha.sub.short kha.top kha.top.1 sha.backup sha.sub sha.sub.short sha.top ya.sub ya.sub.alt ya.sub.short ya.sub.short.alt ya.top];
+@color = [dha.sub dha.sub.short kru kruu rjha rnya ru.sub ruu.sub shrd-ca tha.sub tha.sub.short ya.nukta.sub ya.nukta.sub.alt ya.sub ya.sub.alt];
+@cyrl = [ha.sub ha.sub.short ha.top ka.alt ka.alt.1.2 ka.alt.nukta.sub ka.alt.nukta.sub.short ka.alt.sub ka.alt.sub.short ka.nukta.sub ka.nukta.sub.short ka.sub ka.sub.alt ka.sub.alt.1 ka.sub.short ka.sub.short.1 ka.top.alt ka.top.alt.2 ka.top.alt2 ka.top.alt3 ka.top.half kha.nukta.sub kha.sub kha.sub.half kha.sub.half.1 kha.sub.half.2 kha.sub.nukta.short kha.sub.short kha.top kha.top.1 sha.backup sha.sub sha.sub.short sha.top ya.nukta.sub ya.nukta.sub.alt ya.sub ya.sub.alt ya.sub.nukta.short ya.sub.nukta.short.alt ya.sub.short ya.sub.short.alt ya.top];
 @desc = [g j p q thorn y yacute ydieresis];
 @deva = [candrabinduhalant-deva];
 @fig = [eight five four nine one seven shrd-0 shrd-1 shrd-2 shrd-3 shrd-4 shrd-5 shrd-6 shrd-7 shrd-8 shrd-9 six three two zero];
-@java = [ba.sub ba.sub.short ba.top ca.sub ca.sub.short ca.top da.sub da.sub.short da.top da.top.half dda.sub dda.sub.short dda.top ga.sub ga.sub.half ga.sub.short ga.top ga.top.half ja.sub ja.sub.short ja.top la.sub la.sub.short la.top ma.sub ma.sub.short ma.top na.sub na.sub.short na.top nga.sub nga.sub.short nga.top nga.top.half nya.sub nya.sub.short nya.top nya.top.half pa.backup pa.sub pa.sub.1 pa.sub.short pa.sub.short.1 pa.top ra.sub ra.sub.1 ra.sub.2 ra.top sa.sub sa.sub.short sa.top ta.alt ta.sub ta.sub.short ta.sub.short.1 ta.sub.short.2 ta.top ta.top.alt tta.sub tta.sub.half tta.sub.short tta.top tta.top.half];
+@java = [ba.sub ba.sub.short ba.top ca.nukta.sub ca.sub ca.sub.nukta.short ca.sub.short ca.top da.sub da.sub.short da.top da.top.half dda.sub dda.sub.short dda.top ga.nukta.sub ga.sub ga.sub.half ga.sub.nukta.short ga.sub.short ga.top ga.top.half ja.nukta.sub ja.sub ja.sub.nukta.short ja.sub.short ja.top la.sub la.sub.short la.top ma.sub ma.sub.short ma.top na.nukta.sub na.sub na.sub.nukta.short na.sub.short na.top nga.sub nga.sub.short nga.top nga.top.half nya.sub nya.sub.short nya.top nya.top.half pa.backup pa.sub pa.sub.1 pa.sub.short pa.sub.short.1 pa.top ra.sub ra.sub.1 ra.sub.2 ra.top sa.sub sa.sub.short sa.top ta.alt ta.sub ta.sub.short ta.sub.short.1 ta.sub.short.2 ta.top ta.top.alt tta.sub tta.sub.half tta.sub.short tta.top tta.top.half];
 @khoj = [virama.alt];
 @latn = [A AE Aacute Acircumflex Adieresis Agrave Aring Atilde B C Ccedilla D E Eacute Ecircumflex Edieresis Egrave Eth F G H I Iacute Icircumflex Idieresis Igrave J K L M N Ntilde O Oacute Ocircumflex Odieresis Ograve Oslash Otilde P Q R S T Thorn U Uacute Ucircumflex Udieresis Ugrave V W X Y Yacute Z a aacute acircumflex adieresis ae agrave aring atilde au.alt b c ccedilla d e eacute ecircumflex edieresis egrave eth f g germandbls h i iacute icircumflex idieresis igrave j k l m n ntilde o oacute ocircumflex odieresis ograve ordfeminine ordmasculine oslash otilde p q r s t thorn u uacute ucircumflex udieresis ugrave v w x y yacute ydieresis z];
 @lc = [a aacute acircumflex adieresis ae agrave aring atilde b c ccedilla d e eacute ecircumflex edieresis egrave eth f g germandbls h i iacute icircumflex idieresis igrave j k l m n ntilde o oacute ocircumflex odieresis ograve ordfeminine ordmasculine oslash otilde p q r s t thorn u uacute ucircumflex udieresis ugrave v w x y yacute ydieresis z];
-@mymr = [lla.sub lla.sub.short lla.top];
-@noblank = [A AE Aacute Acircumflex Adieresis Agrave Aring Atilde B C Ccedilla D E Eacute Ecircumflex Edieresis Egrave Eth F G H I Iacute Icircumflex Idieresis Igrave J K L M N Ntilde O Oacute Ocircumflex Odieresis Ograve Oslash Otilde P Q R S T Thorn U Uacute Ucircumflex Udieresis Ugrave V W X Y Yacute Z a aacute acircumflex adieresis ae agrave ai-sign.alt aring asciicircum asciitilde asterisk atilde au.alt b ba.sub ba.sub.short ba.top backslash bar bha.sub bha.sub.short bha.top braceleft braceright bracketleft bracketright c ca.sub ca.sub.short ca.top candrabinduhalant-deva ccedilla cha.sub cha.sub.short cha.top chandra.alt chha.sub.1 chha.top.1 circledotted colon comma d da.sub da.sub.short da.top da.top.half dda.sub dda.sub.short dda.top ddha.sub ddha.sub.short ddha.top dha.sub dha.sub.short dha.top divide e e-sign.alt eacute ecircumflex edieresis egrave eight ellipsis emdash endash equal eth exclam f five four g ga.sub ga.sub.half ga.sub.short ga.top ga.top.half germandbls gha.sub gha.sub.short gha.top greater h ha.sub ha.sub.short ha.top hyphen i iacute icircumflex idieresis igrave j ja.sub ja.sub.short ja.top jaa jaa.top jha.sub jha.sub.short jha.top jha.top.half jnya jnya.sub jnya.sub.short jnya.top jnyaa k ka.alt ka.alt.1.2 ka.alt.sub ka.alt.sub.short ka.sub ka.sub.alt ka.sub.alt.1 ka.sub.short ka.sub.short.1 ka.top.alt ka.top.alt.2 ka.top.alt2 ka.top.alt3 ka.top.half kha.sub kha.sub.half kha.sub.half.1 kha.sub.half.2 kha.sub.short kha.top kha.top.1 kru kruu kssa.alt kssa.alt.1 kssa.alt.top kssa.sub kssa.sub.short kssa.top ksssa l la.sub la.sub.short la.top less lla.sub lla.sub.short lla.top lu.alt luu.alt m ma.sub ma.sub.short ma.top minus multiply n na.sub na.sub.short na.top nga.sub nga.sub.short nga.top nga.top.half ngaa ngaa.top nine nna.sub nna.sub.short nna.top nna.top.alt nnaa nnaa.top ntilde numbersign nya.sub nya.sub.short nya.top nya.top.half o oacute ocircumflex odieresis ograve one ordfeminine ordmasculine oslash otilde p pa.backup pa.sub pa.sub.1 pa.sub.short pa.sub.short.1 pa.top parenleft parenright percent period pha.sub pha.sub.short pha.top plus q question quotedbl quotedblleft quotedblright quoteleft quoteright quotesingle r ra.sub ra.sub.1 ra.sub.2 ra.top rca rdha rga rja rjaa rjha rjnya rjnyaa rkha rnga rngaa rnna rnya rsha rtha ru ru.sub ruu.sub rva rya s sa.sub sa.sub.short sa.top semicolon seven sha.backup sha.sub sha.sub.short sha.top sharda-vow-mod shrd-0 shrd-1 shrd-2 shrd-3 shrd-4 shrd-5 shrd-6 shrd-7 shrd-8 shrd-9 shrd-a shrd-aa shrd-aa.1 shrd-abbr shrd-ai shrd-anudatta shrd-anusvara shrd-au shrd-avagr shrd-ba shrd-bha shrd-ca shrd-cha shrd-cha.1 shrd-chandrabindu shrd-cont shrd-da shrd-danda shrd-dda shrd-ddanda shrd-ddha shrd-dha shrd-dot shrd-e shrd-ekam shrd-extr-short shrd-ga shrd-gha shrd-ha shrd-head shrd-i shrd-ii shrd-inv-chandra shrd-ja shrd-jha shrd-jihva shrd-ka shrd-ka.1 shrd-kathaka shrd-kha shrd-kha.1 shrd-la shrd-lla shrd-ma shrd-na shrd-nga shrd-nna shrd-nukta shrd-nya shrd-o shrd-om shrd-pa shrd-pha shrd-prish-e shrd-ra shrd-sa shrd-sandhi shrd-sect shrd-sect-1 shrd-sect-2 shrd-sep shrd-sha shrd-siddh shrd-ssa shrd-svarita shrd-ta shrd-tha shrd-tta shrd-ttha shrd-u shrd-udatta shrd-upadh shrd-uu shrd-va shrd-virama shrd-visarga shrd-voc-l shrd-voc-ll shrd-voc-r shrd-voc-rr shrd-vs-aa shrd-vs-ai shrd-vs-au shrd-vs-e shrd-vs-i shrd-vs-i.alt shrd-vs-i.short shrd-vs-ii shrd-vs-o shrd-vs-u shrd-vs-uu shrd-vs-vocl shrd-vs-vocll shrd-vs-vocr shrd-vs-vocr.alt shrd-vs-vocrr shrd-vs-vocrr.alt shrd-ya six slash ssa.sub ssa.sub.short ssa.top ssa.top.half t ta.alt ta.sub ta.sub.short ta.sub.short.1 ta.sub.short.2 ta.top ta.top.alt tha.sub tha.sub.short tha.top thorn three tta.sub tta.sub.half tta.sub.short tta.top tta.top.half ttaa ttaa.top ttha.sub ttha.sub.short ttha.top two u u111A1.1 uacute ucircumflex udieresis ugrave underscore uni00B2 uni00B3 v va.sub va.sub.1 va.sub.2 va.sub.short va.top virama.alt vow.sp.1 vow.sp.2 vow.sp.3 vow.sp.4 vow.sp.5 vow.sp.6 vs-aa.alt vs-ii-alt vs-u.alt vs-u.alt.1 vs-uu.alt vs-uu.alt.1 w x xka xka.alt xkha y ya.sub ya.sub.alt ya.sub.short ya.sub.short.alt ya.top yacute ydieresis z zero];
-@noncomposite = [A AE Aacute Acircumflex Adieresis Agrave Aring Atilde B C Ccedilla D E Eacute Ecircumflex Edieresis Egrave Eth F G H I Iacute Icircumflex Idieresis Igrave J K L M N Ntilde O Oacute Ocircumflex Odieresis Ograve Oslash Otilde P Q R S T Thorn U Uacute Ucircumflex Udieresis Ugrave V W X Y Yacute Z a aacute acircumflex adieresis ae agrave ai-sign.alt aring asciicircum asciitilde asterisk atilde au.alt b ba.sub ba.sub.short ba.top backslash bar bha.sub bha.sub.short bha.top braceleft braceright bracketleft bracketright c ca.sub ca.sub.short ca.top candrabinduhalant-deva ccedilla cha.sub cha.sub.short cha.top chandra.alt chha.sub.1 chha.top.1 circledotted colon comma d da.sub da.sub.short da.top da.top.half dda.sub dda.sub.short dda.top ddha.sub ddha.sub.short ddha.top dha.sub dha.sub.short dha.top divide e e-sign.alt eacute ecircumflex edieresis egrave eight ellipsis emdash endash equal eth exclam f five four g ga.sub ga.sub.half ga.sub.short ga.top ga.top.half germandbls gha.sub gha.sub.short gha.top greater h ha.sub ha.sub.short ha.top hyphen i iacute icircumflex idieresis igrave j ja.sub ja.sub.short ja.top jaa jaa.top jha.sub jha.sub.short jha.top jha.top.half jnya jnya.sub jnya.sub.short jnya.top jnyaa k ka.alt ka.alt.1.2 ka.alt.sub ka.alt.sub.short ka.sub ka.sub.alt ka.sub.alt.1 ka.sub.short ka.sub.short.1 ka.top.alt ka.top.alt.2 ka.top.alt2 ka.top.alt3 ka.top.half kha.sub kha.sub.half kha.sub.half.1 kha.sub.half.2 kha.sub.short kha.top kha.top.1 kru kruu kssa.alt kssa.alt.1 kssa.alt.top kssa.sub kssa.sub.short kssa.top ksssa l la.sub la.sub.short la.top less lla.sub lla.sub.short lla.top lu.alt luu.alt m ma.sub ma.sub.short ma.top minus multiply n na.sub na.sub.short na.top nga.sub nga.sub.short nga.top nga.top.half ngaa ngaa.top nine nna.sub nna.sub.short nna.top nna.top.alt nnaa nnaa.top ntilde numbersign nya.sub nya.sub.short nya.top nya.top.half o oacute ocircumflex odieresis ograve one ordfeminine ordmasculine oslash otilde p pa.backup pa.sub pa.sub.1 pa.sub.short pa.sub.short.1 pa.top parenleft parenright percent period pha.sub pha.sub.short pha.top plus q question quotedbl quotedblleft quotedblright quoteleft quoteright quotesingle r ra.sub ra.sub.1 ra.sub.2 ra.top rca rdha rga rja rjaa rjha rjnya rjnyaa rkha rnga rngaa rnna rnya rsha rtha ru ru.sub ruu.sub rva rya s sa.sub sa.sub.short sa.top semicolon seven sha.backup sha.sub sha.sub.short sha.top sharda-vow-mod shrd-0 shrd-1 shrd-2 shrd-3 shrd-4 shrd-5 shrd-6 shrd-7 shrd-8 shrd-9 shrd-a shrd-aa shrd-aa.1 shrd-abbr shrd-ai shrd-anudatta shrd-anusvara shrd-au shrd-avagr shrd-ba shrd-bha shrd-ca shrd-cha shrd-cha.1 shrd-chandrabindu shrd-cont shrd-da shrd-danda shrd-dda shrd-ddanda shrd-ddha shrd-dha shrd-dot shrd-e shrd-ekam shrd-extr-short shrd-ga shrd-gha shrd-ha shrd-head shrd-i shrd-ii shrd-inv-chandra shrd-ja shrd-jha shrd-jihva shrd-ka shrd-ka.1 shrd-kathaka shrd-kha shrd-kha.1 shrd-la shrd-lla shrd-ma shrd-na shrd-nga shrd-nna shrd-nukta shrd-nya shrd-o shrd-om shrd-pa shrd-pha shrd-prish-e shrd-ra shrd-sa shrd-sandhi shrd-sect shrd-sect-1 shrd-sect-2 shrd-sep shrd-sha shrd-siddh shrd-ssa shrd-svarita shrd-ta shrd-tha shrd-tta shrd-ttha shrd-u shrd-udatta shrd-upadh shrd-uu shrd-va shrd-virama shrd-visarga shrd-voc-l shrd-voc-ll shrd-voc-r shrd-voc-rr shrd-vs-aa shrd-vs-ai shrd-vs-au shrd-vs-e shrd-vs-i shrd-vs-i.alt shrd-vs-i.short shrd-vs-ii shrd-vs-o shrd-vs-u shrd-vs-uu shrd-vs-vocl shrd-vs-vocll shrd-vs-vocr shrd-vs-vocr.alt shrd-vs-vocrr shrd-vs-vocrr.alt shrd-ya six slash ssa.sub ssa.sub.short ssa.top ssa.top.half t ta.alt ta.sub ta.sub.short ta.sub.short.1 ta.sub.short.2 ta.top ta.top.alt tha.sub tha.sub.short tha.top thorn three tta.sub tta.sub.half tta.sub.short tta.top tta.top.half ttaa ttaa.top ttha.sub ttha.sub.short ttha.top two u u111A1.1 uacute ucircumflex udieresis ugrave underscore uni00B2 uni00B3 v va.sub va.sub.1 va.sub.2 va.sub.short va.top virama.alt vow.sp.1 vow.sp.2 vow.sp.3 vow.sp.4 vow.sp.5 vow.sp.6 vs-aa.alt vs-ii-alt vs-u.alt vs-u.alt.1 vs-uu.alt vs-uu.alt.1 w x xka xka.alt xkha y ya.sub ya.sub.alt ya.sub.short ya.sub.short.alt ya.top yacute ydieresis z zero];
-@otmark = [ai-sign.alt au.alt ba.sub ba.sub.short bha.sub bha.sub.short ca.sub ca.sub.short cha.sub cha.sub.short chandra.alt chha.sub.1 da.sub da.sub.short dda.sub dda.sub.short ddha.sub ddha.sub.short dha.sub dha.sub.short e-sign.alt ga.sub ga.sub.half ga.sub.short gha.sub gha.sub.short ha.sub ha.sub.short ja.sub ja.sub.short jha.sub jha.sub.short jnya.sub jnya.sub.short ka.alt.sub ka.alt.sub.short ka.sub ka.sub.alt ka.sub.alt.1 ka.sub.short kha.sub kha.sub.half kha.sub.half.1 kha.sub.half.2 kha.sub.short kssa.sub kssa.sub.short la.sub la.sub.short lla.sub lla.sub.short lu.alt luu.alt ma.sub ma.sub.short na.sub na.sub.short nga.sub nga.sub.short nna.sub nna.sub.short nya.sub nya.sub.short pa.sub pa.sub.1 pa.sub.short pa.sub.short.1 pha.sub pha.sub.short ra.sub ra.sub.1 ra.sub.2 ru.sub ruu.sub sa.sub sa.sub.short sha.sub sha.sub.short sharda-vow-mod shrd-anudatta shrd-anusvara shrd-chandrabindu shrd-dot shrd-inv-chandra shrd-jihva shrd-kathaka shrd-nukta shrd-svarita shrd-udatta shrd-upadh shrd-vs-ai shrd-vs-e shrd-vs-o shrd-vs-u shrd-vs-uu shrd-vs-vocl shrd-vs-vocll shrd-vs-vocr shrd-vs-vocr.alt shrd-vs-vocrr shrd-vs-vocrr.alt ssa.sub ssa.sub.short ta.sub ta.sub.short ta.sub.short.1 tha.sub tha.sub.short tta.sub tta.sub.short ttha.sub ttha.sub.short u111A1.1 va.sub va.sub.1 va.sub.2 va.sub.short vow.sp.1 vow.sp.2 vow.sp.5 vow.sp.6 vs-u.alt vs-u.alt.1 vs-uu.alt vs-uu.alt.1 ya.sub ya.sub.alt ya.sub.short ya.sub.short.alt];
-@otnone = [A AE Aacute Acircumflex Adieresis Agrave Aring Atilde B C CR Ccedilla D E Eacute Ecircumflex Edieresis Egrave Eth F G H I Iacute Icircumflex Idieresis Igrave J K L M N Ntilde O Oacute Ocircumflex Odieresis Ograve Oslash Otilde P Q R S T Thorn U Uacute Ucircumflex Udieresis Ugrave V W X Y Yacute Z a aacute acircumflex adieresis ae agrave aring asciicircum asciitilde asterisk atilde b backslash bar braceleft braceright bracketleft bracketright c candrabinduhalant-deva ccedilla circledotted colon comma d divide e eacute ecircumflex edieresis egrave eight ellipsis emdash endash equal eth exclam f five four g germandbls greater h hyphen i iacute icircumflex idieresis igrave j jhaa.top.half k ka.sub.short.1 kssa.alt.1 kssa.new kssa.sub.short.1 ksssa l less m minus multiply n ngaa.top.half nine nja.top ntilde numbersign o oacute ocircumflex odieresis ograve one ordfeminine ordmasculine oslash otilde p parenleft parenright percent period plus q question quotedbl quotedblleft quotedblright quoteleft quoteright quotesingle r s semicolon seven shrd-aa shrd-nga.1 shrd-vs-i six slash t ta.sub.short.2 thorn three two u uacute ucircumflex udieresis ugrave underscore uni00B2 uni00B3 v w x y yacute ydieresis z zero zerowidthjoiner zerowidthnonjoiner];
-@otsimp = [ba.top bha.top ca.top cha.top chha.top.1 da.top da.top.half dda.top ddha.top dha.top ga.top ga.top.half gha.top ha.top ja.top jaa jaa.top jha.top jha.top.half jnya jnya.top jnyaa jnyaa.top ka.alt ka.alt.1.2 ka.top.alt ka.top.alt.2 ka.top.alt2 ka.top.alt3 ka.top.half kha.top kha.top.1 kru kruu kssa.alt kssa.alt.top kssa.top la.top lla.top ma.top na.top nga.top nga.top.half ngaa ngaa.top nna.top nna.top.alt nnaa nnaa.top nya.top nya.top.half pa.backup pa.top pha.top ra.top rca rdha rga rja rjaa rjha rjnya rjnyaa rkha rnga rngaa rnna rnya rsha rtha ru rva rya sa.top sha.backup sha.top shrd-0 shrd-1 shrd-2 shrd-3 shrd-4 shrd-5 shrd-6 shrd-7 shrd-8 shrd-9 shrd-a shrd-aa.1 shrd-abbr shrd-ai shrd-au shrd-avagr shrd-ba shrd-bha shrd-ca shrd-cha shrd-cha.1 shrd-cont shrd-da shrd-danda shrd-dda shrd-ddanda shrd-ddha shrd-dha shrd-e shrd-ekam shrd-extr-short shrd-ga shrd-gha shrd-ha shrd-head shrd-i shrd-ii shrd-ja shrd-jha shrd-ka shrd-ka.1 shrd-kha shrd-kha.1 shrd-la shrd-lla shrd-ma shrd-na shrd-nga shrd-nna shrd-nya shrd-o shrd-om shrd-pa shrd-pha shrd-prish-e shrd-ra shrd-sa shrd-sandhi shrd-sect shrd-sect-1 shrd-sect-2 shrd-sep shrd-sha shrd-siddh shrd-ssa shrd-ta shrd-tha shrd-tta shrd-ttha shrd-u shrd-uu shrd-va shrd-virama shrd-visarga shrd-voc-l shrd-voc-ll shrd-voc-r shrd-voc-rr shrd-vs-aa shrd-vs-au shrd-vs-i.alt shrd-vs-i.short shrd-vs-ii shrd-ya space ssa.top ssa.top.half ta.alt ta.top ta.top.alt tha.top tta.sub.half tta.top tta.top.half ttaa ttaa.top ttha.top va.top virama.alt vow.sp.3 vow.sp.4 vs-aa.alt vs-ii-alt xka xka.alt xkha ya.top];
+@mymr = [lla.nukta.sub lla.sub lla.sub.nukta.short lla.sub.short lla.top];
+@noblank = [A AE Aacute Acircumflex Adieresis Agrave Aring Atilde B C Ccedilla D E Eacute Ecircumflex Edieresis Egrave Eth F G H I Iacute Icircumflex Idieresis Igrave J K L M N Ntilde O Oacute Ocircumflex Odieresis Ograve Oslash Otilde P Q R S T Thorn U Uacute Ucircumflex Udieresis Ugrave V W X Y Yacute Z a aacute acircumflex adieresis ae agrave ai-sign.alt aring asciicircum asciitilde asterisk atilde au.alt b ba.sub ba.sub.short ba.top backslash bar bha.sub bha.sub.short bha.top braceleft braceright bracketleft bracketright c ca.nukta.sub ca.sub ca.sub.nukta.short ca.sub.short ca.top candrabinduhalant-deva ccedilla cha.sub cha.sub.short cha.top chandra.alt chha.sub.1 chha.top.1 circledotted colon comma d da.sub da.sub.short da.top da.top.half dda.sub dda.sub.short dda.top ddha.sub ddha.sub.short ddha.top dha.sub dha.sub.short dha.top divide e e-sign.alt eacute ecircumflex edieresis egrave eight ellipsis emdash endash equal eth exclam f five four g ga.nukta.sub ga.sub ga.sub.half ga.sub.nukta.short ga.sub.short ga.top ga.top.half germandbls gha.sub gha.sub.short gha.top greater h ha.sub ha.sub.short ha.top hyphen i iacute icircumflex idieresis igrave j ja.nukta.sub ja.sub ja.sub.nukta.short ja.sub.short ja.top jaa jaa.top jha.sub jha.sub.short jha.top jha.top.half jnya jnya.sub jnya.sub.short jnya.top jnyaa k ka.alt ka.alt.1.2 ka.alt.nukta.sub ka.alt.nukta.sub.short ka.alt.sub ka.alt.sub.short ka.nukta.sub ka.nukta.sub.short ka.sub ka.sub.alt ka.sub.alt.1 ka.sub.short ka.sub.short.1 ka.top.alt ka.top.alt.2 ka.top.alt2 ka.top.alt3 ka.top.half kha.nukta.sub kha.sub kha.sub.half kha.sub.half.1 kha.sub.half.2 kha.sub.nukta.short kha.sub.short kha.top kha.top.1 kru kruu kssa.alt kssa.alt.1 kssa.alt.top kssa.sub kssa.sub.short kssa.top ksssa l la.sub la.sub.short la.top less lla.nukta.sub lla.sub lla.sub.nukta.short lla.sub.short lla.top lu.alt luu.alt m ma.sub ma.sub.short ma.top minus multiply n na.nukta.sub na.sub na.sub.nukta.short na.sub.short na.top nga.sub nga.sub.short nga.top nga.top.half ngaa ngaa.top nine nna.sub nna.sub.short nna.top nna.top.alt nnaa nnaa.top ntilde numbersign nya.sub nya.sub.short nya.top nya.top.half o oacute ocircumflex odieresis ograve one ordfeminine ordmasculine oslash otilde p pa.backup pa.sub pa.sub.1 pa.sub.short pa.sub.short.1 pa.top parenleft parenright percent period pha.nukta.sub pha.sub pha.sub.nukta.short pha.sub.short pha.top plus q question quotedbl quotedblleft quotedblright quoteleft quoteright quotesingle r ra.sub ra.sub.1 ra.sub.2 ra.top rca rdha rga rja rjaa rjha rjnya rjnyaa rkha rnga rngaa rnna rnya rsha rtha ru ru.sub ruu.sub rva rya s sa.sub sa.sub.short sa.top semicolon seven sha.backup sha.sub sha.sub.short sha.top sharda-vow-mod shrd-0 shrd-1 shrd-2 shrd-3 shrd-4 shrd-5 shrd-6 shrd-7 shrd-8 shrd-9 shrd-a shrd-aa shrd-aa.1 shrd-abbr shrd-ai shrd-anudatta shrd-anusvara shrd-au shrd-avagr shrd-ba shrd-bha shrd-ca shrd-cha shrd-cha.1 shrd-chandrabindu shrd-cont shrd-da shrd-danda shrd-dda shrd-ddanda shrd-ddha shrd-dha shrd-dot shrd-e shrd-ekam shrd-extr-short shrd-ga shrd-gha shrd-ha shrd-head shrd-i shrd-ii shrd-inv-chandra shrd-ja shrd-jha shrd-jihva shrd-ka shrd-ka.1 shrd-kathaka shrd-kha shrd-kha.1 shrd-la shrd-lla shrd-ma shrd-na shrd-nga shrd-nna shrd-nukta shrd-nya shrd-o shrd-om shrd-pa shrd-pha shrd-prish-e shrd-ra shrd-sa shrd-sandhi shrd-sect shrd-sect-1 shrd-sect-2 shrd-sep shrd-sha shrd-siddh shrd-ssa shrd-svarita shrd-ta shrd-tha shrd-tta shrd-ttha shrd-u shrd-udatta shrd-upadh shrd-uu shrd-va shrd-virama shrd-visarga shrd-voc-l shrd-voc-ll shrd-voc-r shrd-voc-rr shrd-vs-aa shrd-vs-aa.vow-mod shrd-vs-ai shrd-vs-au shrd-vs-e shrd-vs-i shrd-vs-i.alt shrd-vs-i.short shrd-vs-ii shrd-vs-o shrd-vs-u shrd-vs-uu shrd-vs-vocl shrd-vs-vocll shrd-vs-vocr shrd-vs-vocr.alt shrd-vs-vocrr shrd-vs-vocrr.alt shrd-ya six slash ssa.sub ssa.sub.short ssa.top ssa.top.half t ta.alt ta.sub ta.sub.short ta.sub.short.1 ta.sub.short.2 ta.top ta.top.alt tha.sub tha.sub.short tha.top thorn three tta.sub tta.sub.half tta.sub.short tta.top tta.top.half ttaa ttaa.top ttha.sub ttha.sub.short ttha.top two u u111A1.1 uacute ucircumflex udieresis ugrave underscore uni00B2 uni00B3 v va.sub va.sub.1 va.sub.2 va.sub.short va.top virama.alt vow.sp.1 vow.sp.2 vow.sp.3 vow.sp.4 vow.sp.5 vow.sp.6 vs-aa.alt vs-ii-alt vs-u.alt vs-u.alt.1 vs-uu.alt vs-uu.alt.1 w x xka xka.alt xkha y ya.nukta.sub ya.nukta.sub.alt ya.sub ya.sub.alt ya.sub.nukta.short ya.sub.nukta.short.alt ya.sub.short ya.sub.short.alt ya.top yacute ydieresis z zero];
+@noncomposite = [A AE Aacute Acircumflex Adieresis Agrave Aring Atilde B C Ccedilla D E Eacute Ecircumflex Edieresis Egrave Eth F G H I Iacute Icircumflex Idieresis Igrave J K L M N Ntilde O Oacute Ocircumflex Odieresis Ograve Oslash Otilde P Q R S T Thorn U Uacute Ucircumflex Udieresis Ugrave V W X Y Yacute Z a aacute acircumflex adieresis ae agrave ai-sign.alt aring asciicircum asciitilde asterisk atilde au.alt b ba.sub ba.sub.short ba.top backslash bar bha.sub bha.sub.short bha.top braceleft braceright bracketleft bracketright c ca.nukta.sub ca.sub ca.sub.nukta.short ca.sub.short ca.top candrabinduhalant-deva ccedilla cha.sub cha.sub.short cha.top chandra.alt chha.sub.1 chha.top.1 circledotted colon comma d da.sub da.sub.short da.top da.top.half dda.sub dda.sub.short dda.top ddha.sub ddha.sub.short ddha.top dha.sub dha.sub.short dha.top divide e e-sign.alt eacute ecircumflex edieresis egrave eight ellipsis emdash endash equal eth exclam f five four g ga.nukta.sub ga.sub ga.sub.half ga.sub.nukta.short ga.sub.short ga.top ga.top.half germandbls gha.sub gha.sub.short gha.top greater h ha.sub ha.sub.short ha.top hyphen i iacute icircumflex idieresis igrave j ja.nukta.sub ja.sub ja.sub.nukta.short ja.sub.short ja.top jaa jaa.top jha.sub jha.sub.short jha.top jha.top.half jnya jnya.sub jnya.sub.short jnya.top jnyaa k ka.alt ka.alt.1.2 ka.alt.nukta.sub ka.alt.nukta.sub.short ka.alt.sub ka.alt.sub.short ka.nukta.sub ka.nukta.sub.short ka.sub ka.sub.alt ka.sub.alt.1 ka.sub.short ka.sub.short.1 ka.top.alt ka.top.alt.2 ka.top.alt2 ka.top.alt3 ka.top.half kha.nukta.sub kha.sub kha.sub.half kha.sub.half.1 kha.sub.half.2 kha.sub.nukta.short kha.sub.short kha.top kha.top.1 kru kruu kssa.alt kssa.alt.1 kssa.alt.top kssa.sub kssa.sub.short kssa.top ksssa l la.sub la.sub.short la.top less lla.nukta.sub lla.sub lla.sub.nukta.short lla.sub.short lla.top lu.alt luu.alt m ma.sub ma.sub.short ma.top minus multiply n na.nukta.sub na.sub na.sub.nukta.short na.sub.short na.top nga.sub nga.sub.short nga.top nga.top.half ngaa ngaa.top nine nna.sub nna.sub.short nna.top nna.top.alt nnaa nnaa.top ntilde numbersign nya.sub nya.sub.short nya.top nya.top.half o oacute ocircumflex odieresis ograve one ordfeminine ordmasculine oslash otilde p pa.backup pa.sub pa.sub.1 pa.sub.short pa.sub.short.1 pa.top parenleft parenright percent period pha.nukta.sub pha.sub pha.sub.nukta.short pha.sub.short pha.top plus q question quotedbl quotedblleft quotedblright quoteleft quoteright quotesingle r ra.sub ra.sub.1 ra.sub.2 ra.top rca rdha rga rja rjaa rjha rjnya rjnyaa rkha rnga rngaa rnna rnya rsha rtha ru ru.sub ruu.sub rva rya s sa.sub sa.sub.short sa.top semicolon seven sha.backup sha.sub sha.sub.short sha.top sharda-vow-mod shrd-0 shrd-1 shrd-2 shrd-3 shrd-4 shrd-5 shrd-6 shrd-7 shrd-8 shrd-9 shrd-a shrd-aa shrd-aa.1 shrd-abbr shrd-ai shrd-anudatta shrd-anusvara shrd-au shrd-avagr shrd-ba shrd-bha shrd-ca shrd-cha shrd-cha.1 shrd-chandrabindu shrd-cont shrd-da shrd-danda shrd-dda shrd-ddanda shrd-ddha shrd-dha shrd-dot shrd-e shrd-ekam shrd-extr-short shrd-ga shrd-gha shrd-ha shrd-head shrd-i shrd-ii shrd-inv-chandra shrd-ja shrd-jha shrd-jihva shrd-ka shrd-ka.1 shrd-kathaka shrd-kha shrd-kha.1 shrd-la shrd-lla shrd-ma shrd-na shrd-nga shrd-nna shrd-nukta shrd-nya shrd-o shrd-om shrd-pa shrd-pha shrd-prish-e shrd-ra shrd-sa shrd-sandhi shrd-sect shrd-sect-1 shrd-sect-2 shrd-sep shrd-sha shrd-siddh shrd-ssa shrd-svarita shrd-ta shrd-tha shrd-tta shrd-ttha shrd-u shrd-udatta shrd-upadh shrd-uu shrd-va shrd-virama shrd-visarga shrd-voc-l shrd-voc-ll shrd-voc-r shrd-voc-rr shrd-vs-aa shrd-vs-aa.vow-mod shrd-vs-ai shrd-vs-au shrd-vs-e shrd-vs-i shrd-vs-i.alt shrd-vs-i.short shrd-vs-ii shrd-vs-o shrd-vs-u shrd-vs-uu shrd-vs-vocl shrd-vs-vocll shrd-vs-vocr shrd-vs-vocr.alt shrd-vs-vocrr shrd-vs-vocrr.alt shrd-ya six slash ssa.sub ssa.sub.short ssa.top ssa.top.half t ta.alt ta.sub ta.sub.short ta.sub.short.1 ta.sub.short.2 ta.top ta.top.alt tha.sub tha.sub.short tha.top thorn three tta.sub tta.sub.half tta.sub.short tta.top tta.top.half ttaa ttaa.top ttha.sub ttha.sub.short ttha.top two u u111A1.1 uacute ucircumflex udieresis ugrave underscore uni00B2 uni00B3 v va.sub va.sub.1 va.sub.2 va.sub.short va.top virama.alt vow.sp.1 vow.sp.2 vow.sp.3 vow.sp.4 vow.sp.5 vow.sp.6 vs-aa.alt vs-ii-alt vs-u.alt vs-u.alt.1 vs-uu.alt vs-uu.alt.1 w x xka xka.alt xkha y ya.nukta.sub ya.nukta.sub.alt ya.sub ya.sub.alt ya.sub.nukta.short ya.sub.nukta.short.alt ya.sub.short ya.sub.short.alt ya.top yacute ydieresis z zero];
+@otmark = [ai-sign.alt au.alt ba.sub ba.sub.short bha.sub bha.sub.short ca.nukta.sub ca.sub ca.sub.nukta.short ca.sub.short cha.sub cha.sub.short chandra.alt chha.sub.1 da.sub da.sub.short dda.sub dda.sub.short ddha.sub ddha.sub.short dha.sub dha.sub.short e-sign.alt ga.nukta.sub ga.sub ga.sub.half ga.sub.nukta.short ga.sub.short gha.sub gha.sub.short ha.sub ha.sub.short ja.nukta.sub ja.sub ja.sub.nukta.short ja.sub.short jha.sub jha.sub.short jnya.sub jnya.sub.short ka.alt.nukta.sub ka.alt.nukta.sub.short ka.alt.sub ka.alt.sub.short ka.nukta.sub ka.nukta.sub.short ka.sub ka.sub.alt ka.sub.alt.1 ka.sub.short kha.nukta.sub kha.sub kha.sub.half kha.sub.half.1 kha.sub.half.2 kha.sub.nukta.short kha.sub.short kssa.sub kssa.sub.short la.sub la.sub.short lla.nukta.sub lla.sub lla.sub.nukta.short lla.sub.short lu.alt luu.alt ma.sub ma.sub.short na.nukta.sub na.sub na.sub.nukta.short na.sub.short nga.sub nga.sub.short nna.sub nna.sub.short nya.sub nya.sub.short pa.sub pa.sub.1 pa.sub.short pa.sub.short.1 pha.nukta.sub pha.sub pha.sub.nukta.short pha.sub.short ra.sub ra.sub.1 ra.sub.2 ru.sub ruu.sub sa.sub sa.sub.short sha.sub sha.sub.short sharda-vow-mod shrd-anudatta shrd-anusvara shrd-chandrabindu shrd-dot shrd-inv-chandra shrd-jihva shrd-kathaka shrd-nukta shrd-svarita shrd-udatta shrd-upadh shrd-vs-ai shrd-vs-e shrd-vs-o shrd-vs-u shrd-vs-uu shrd-vs-vocl shrd-vs-vocll shrd-vs-vocr shrd-vs-vocr.alt shrd-vs-vocrr shrd-vs-vocrr.alt ssa.sub ssa.sub.short ta.sub ta.sub.short ta.sub.short.1 tha.sub tha.sub.short tta.sub tta.sub.short ttha.sub ttha.sub.short u111A1.1 va.sub va.sub.1 va.sub.2 va.sub.short vow.sp.1 vow.sp.2 vow.sp.3 vow.sp.5 vow.sp.6 vs-u.alt vs-u.alt.1 vs-uu.alt vs-uu.alt.1 ya.nukta.sub ya.nukta.sub.alt ya.sub ya.sub.alt ya.sub.nukta.short ya.sub.nukta.short.alt ya.sub.short ya.sub.short.alt];
+@otnone = [A AE Aacute Acircumflex Adieresis Agrave Aring Atilde B C CR Ccedilla D E Eacute Ecircumflex Edieresis Egrave Eth F G H I Iacute Icircumflex Idieresis Igrave J K L M N Ntilde O Oacute Ocircumflex Odieresis Ograve Oslash Otilde P Q R S T Thorn U Uacute Ucircumflex Udieresis Ugrave V W X Y Yacute Z a aacute acircumflex adieresis ae agrave aring asciicircum asciitilde asterisk atilde b backslash bar braceleft braceright bracketleft bracketright c candrabinduhalant-deva ccedilla circledotted colon comma d divide dummy.1 e eacute ecircumflex edieresis egrave eight ellipsis emdash endash equal eth exclam f five four g germandbls greater h hyphen i iacute icircumflex idieresis igrave j jhaa.top.half k ka.sub.short.1 kssa.alt.1 kssa.new kssa.sub.short.1 ksssa l less m minus multiply n ngaa.top.half nine nja.top ntilde numbersign o oacute ocircumflex odieresis ograve one ordfeminine ordmasculine oslash otilde p parenleft parenright percent period plus q question quotedbl quotedblleft quotedblright quoteleft quoteright quotesingle r s semicolon seven shrd-aa shrd-nga.1 shrd-vs-i six slash t ta.sub.short.2 thorn three two u uacute ucircumflex udieresis ugrave underscore uni00B2 uni00B3 v w x y yacute ydieresis z zero zerowidthjoiner zerowidthnonjoiner];
+@otsimp = [ba.top bha.top ca.top cha.top chha.top.1 da.top da.top.half dda.top ddha.top dha.top ga.top ga.top.half gha.top ha.top ja.top jaa jaa.top jha.top jha.top.half jnya jnya.top jnyaa jnyaa.top ka.alt ka.alt.1.2 ka.top.alt ka.top.alt.2 ka.top.alt2 ka.top.alt3 ka.top.half kha.top kha.top.1 kru kruu kssa.alt kssa.alt.top kssa.top la.top lla.top ma.top na.top nga.top nga.top.half ngaa ngaa.top nna.top nna.top.alt nnaa nnaa.top nya.top nya.top.half pa.backup pa.top pha.top ra.top rca rdha rga rja rjaa rjha rjnya rjnyaa rkha rnga rngaa rnna rnya rsha rtha ru rva rya sa.top sha.backup sha.top shrd-0 shrd-1 shrd-2 shrd-3 shrd-4 shrd-5 shrd-6 shrd-7 shrd-8 shrd-9 shrd-a shrd-aa.1 shrd-abbr shrd-ai shrd-au shrd-avagr shrd-ba shrd-bha shrd-ca shrd-cha shrd-cha.1 shrd-cont shrd-da shrd-danda shrd-dda shrd-ddanda shrd-ddha shrd-dha shrd-e shrd-ekam shrd-extr-short shrd-ga shrd-gha shrd-ha shrd-head shrd-i shrd-ii shrd-ja shrd-jha shrd-ka shrd-ka.1 shrd-kha shrd-kha.1 shrd-la shrd-lla shrd-ma shrd-na shrd-nga shrd-nna shrd-nya shrd-o shrd-om shrd-pa shrd-pha shrd-prish-e shrd-ra shrd-sa shrd-sandhi shrd-sect shrd-sect-1 shrd-sect-2 shrd-sep shrd-sha shrd-siddh shrd-ssa shrd-ta shrd-tha shrd-tta shrd-ttha shrd-u shrd-uu shrd-va shrd-virama shrd-visarga shrd-voc-l shrd-voc-ll shrd-voc-r shrd-voc-rr shrd-vs-aa shrd-vs-aa.vow-mod shrd-vs-au shrd-vs-i.alt shrd-vs-i.short shrd-vs-ii shrd-ya space ssa.top ssa.top.half ta.alt ta.top ta.top.alt tha.top tta.sub.half tta.top tta.top.half ttaa ttaa.top ttha.top va.top virama.alt vow.sp.4 vs-aa.alt vs-ii-alt xka xka.alt xkha ya.top];
 @shrd = [sharda-vow-mod shrd-0 shrd-1 shrd-2 shrd-3 shrd-4 shrd-5 shrd-6 shrd-7 shrd-8 shrd-9 shrd-a shrd-aa shrd-abbr shrd-ai shrd-anusvara shrd-au shrd-avagr shrd-ba shrd-bha shrd-ca shrd-cha shrd-chandrabindu shrd-cont shrd-da shrd-danda shrd-dda shrd-ddanda shrd-ddha shrd-dha shrd-e shrd-ekam shrd-extr-short shrd-ga shrd-gha shrd-ha shrd-head shrd-i shrd-ii shrd-inv-chandra shrd-ja shrd-jha shrd-jihva shrd-ka shrd-kha shrd-la shrd-lla shrd-ma shrd-na shrd-nga shrd-nna shrd-nukta shrd-nya shrd-o shrd-om shrd-pa shrd-pha shrd-prish-e shrd-ra shrd-sa shrd-sandhi shrd-sect shrd-sect-1 shrd-sect-2 shrd-sep shrd-sha shrd-siddh shrd-ssa shrd-ta shrd-tha shrd-tta shrd-ttha shrd-u shrd-upadh shrd-uu shrd-va shrd-virama shrd-visarga shrd-voc-l shrd-voc-ll shrd-voc-r shrd-voc-rr shrd-vs-aa shrd-vs-ai shrd-vs-au shrd-vs-e shrd-vs-i shrd-vs-ii shrd-vs-o shrd-vs-u shrd-vs-uu shrd-vs-vocl shrd-vs-vocll shrd-vs-vocr shrd-vs-vocrr shrd-ya u111A1.1];
 @tos = [a aacute acircumflex adieresis ae agrave aring atilde b c ccedilla d e eacute ecircumflex edieresis egrave g h m n ntilde o oacute ocircumflex odieresis ograve ordfeminine ordmasculine oslash otilde p q r s thorn];
 @uc = [A AE Aacute Acircumflex Adieresis Agrave Aring Atilde B C Ccedilla D E Eacute Ecircumflex Edieresis Egrave Eth F G H I Iacute Icircumflex Idieresis Igrave J K L M N Ntilde O Oacute Ocircumflex Odieresis Ograve Oslash Otilde P Q R S T Thorn U Uacute Ucircumflex Udieresis Ugrave V W X Y Yacute Z];
@@ -61,6 +62,12 @@ languagesystem DFLT dflt;
 languagesystem latn dflt;
 languagesystem shrd dflt;
 #< languagesystem
+
+
+
+
+
+
 
 
 
@@ -143,21 +150,52 @@ lookup akhn2 {
 	sub rja @char.virama shrd-nya by rjnya;
 }	akhn2;
 
-lookup psts3 {
-    
-lookupflag IgnoreMarks;
+lookup psts3 {    
 sub shrd-vs-i shrd-extr-short by shrd-vs-i.short;
+sub sharda-vow-mod shrd-vs-aa by shrd-vs-aa.vow-mod;
+
+sub shrd-vs-e shrd-extr-short by vow.sp.3;
+sub shrd-vs-o shrd-extr-short by vow.sp.4; 
+
+sub sharda-vow-mod shrd-vs-u by vow.sp.2;
+sub sharda-vow-mod shrd-vs-uu by vow.sp.5;
 
 } psts3;
+
+lookup psts4 {
+sub shrd-e shrd-extr-short' by vow.sp.3;
+sub shrd-o shrd-extr-short' by vow.sp.4;
+
+sub shrd-u sharda-vow-mod' by vow.sp.2;
+sub shrd-uu sharda-vow-mod' by vow.sp.5;
+
+} psts4;
+
+lookup psts5 {
+sub shrd-vs-o shrd-vs-aa.vow-mod' by vow.sp.1;
+} psts5;
+
+lookup psts6 {
+sub shrd-vs-o' vow.sp.1 by shrd-vs-aa;
+} psts6;
 
 lookup akhn1;
 lookup akhn2;
 lookup psts3;
+lookup psts4;
+lookup psts5;
+lookup psts6;
 
 
 #> feature
 #< feature
 } akhn;
+
+
+
+
+
+
 
 
 
@@ -316,6 +354,12 @@ feature psts {
 
 
 
+
+
+
+
+
+
 feature blwf {
 # Below-base Forms
 
@@ -374,7 +418,26 @@ sub xka' [@char.subs shrd-vs-u shrd-vs-uu shrd-vs-vocr shrd-vs-vocrr ya.sub ra.s
 sub [shrd-ka shrd-kha shrd-ga shrd-gha shrd-ja shrd-na shrd-pa shrd-ma shrd-ya shrd-la shrd-va shrd-sha shrd-ssa shrd-sa shrd-ta] ya.sub' by ya.sub.alt;
 sub [ta.sub] ya.sub' by ya.sub.alt;
 
+sub ka.sub shrd-nukta by ka.nukta.sub;
+sub kha.sub shrd-nukta by kha.nukta.sub;
+sub ga.sub shrd-nukta by ga.nukta.sub;
+sub ca.sub shrd-nukta by ca.nukta.sub;
+sub ja.sub shrd-nukta by ja.nukta.sub;
+sub na.sub shrd-nukta by na.nukta.sub;
+sub pha.sub shrd-nukta by pha.nukta.sub;
+sub ya.sub shrd-nukta by ya.nukta.sub;
+sub ya.sub.alt shrd-nukta by ya.nukta.sub.alt;
+
+sub lla.sub shrd-nukta by lla.nukta.sub;
+sub ka.nukta.sub' [shrd-vs-u shrd-vs-uu shrd-vs-vocr shrd-vs-vocrr ya.sub ra.sub ruu.sub ru.sub] by ka.alt.nukta.sub;
+
 } blwf;
+
+
+
+
+
+
 
 
 
@@ -444,14 +507,14 @@ feature blws {
     sub [ka.alt shrd-ga shrd-dda shrd-ta shrd-bha shrd-sha shrd-lla] shrd-nukta shrd-vs-u' by vs-u.alt;
     sub [ka.alt shrd-ga shrd-dda shrd-ta shrd-bha shrd-ra shrd-sha shrd-lla] shrd-nukta shrd-vs-uu' by vs-uu.alt;
 
-    sub [ka.alt.sub ga.sub dda.sub ta.sub bha.sub lla.sub] shrd-vs-u' by vs-u.alt;
-    sub [ka.alt.sub.short ga.sub.short dda.sub.short ta.sub.short bha.sub.short lla.sub.short] shrd-vs-u' by vs-u.alt;
+    sub [ka.alt.sub ga.sub dda.sub ta.sub bha.sub lla.sub ga.nukta.sub lla.nukta.sub ka.alt.nukta.sub ka.alt.nukta.sub.short] shrd-vs-u' by vs-u.alt;
+    sub [ka.alt.sub.short ga.sub.short dda.sub.short ta.sub.short bha.sub.short lla.sub.short ga.sub.nukta.short lla.sub.nukta.short] shrd-vs-u' by vs-u.alt;
 
     sub [ka.alt.sub ga.sub dda.sub ta.sub bha.sub lla.sub] shrd-nukta shrd-vs-u' by vs-u.alt;
     sub [ka.alt.sub.short ga.sub.short dda.sub.short ta.sub.short bha.sub.short lla.sub.short] shrd-nukta shrd-vs-u' by vs-u.alt;
 
-    sub [ka.alt.sub ga.sub dda.sub ta.sub bha.sub lla.sub] shrd-vs-uu' by vs-uu.alt;
-    sub [ka.alt.sub.short ga.sub.short dda.sub.short ta.sub.short bha.sub.short lla.sub.short] shrd-vs-uu' by vs-uu.alt;
+    sub [ka.alt.sub ga.sub dda.sub ta.sub bha.sub lla.sub ga.nukta.sub lla.nukta.sub ka.alt.nukta.sub ka.alt.nukta.sub.short] shrd-vs-uu' by vs-uu.alt;
+    sub [ka.alt.sub.short ga.sub.short dda.sub.short ta.sub.short bha.sub.short lla.sub.short ga.sub.nukta.short lla.sub.nukta.short] shrd-vs-uu' by vs-uu.alt;
 
     sub [ka.alt.sub ga.sub dda.sub ta.sub bha.sub lla.sub] shrd-nukta shrd-vs-uu' by vs-uu.alt;
     sub [ka.alt.sub.short ga.sub.short dda.sub.short ta.sub.short bha.sub.short lla.sub.short] shrd-nukta shrd-vs-uu' by vs-uu.alt;
@@ -473,9 +536,16 @@ feature blws {
    lookup blws1;
    lookup blws2;
 
+
 #> feature
 #< feature
 } blws;
+
+
+
+
+
+
 
 
 
@@ -487,7 +557,6 @@ feature abvs {
 # Above-base Forms
 
 lookup abvs1 {
-
 sub shrd-vs-i @char.baseall shrd-chandrabindu' by chandra.alt;
 
 sub shrd-ka' [pa.sub ma.sub sa.sub shrd-vs-vocl] by ka.top.alt3;
@@ -560,13 +629,49 @@ lookup abvs3 {
 sub ka.top.alt ka.sub.alt shrd-jihva by xka;
 } abvs3;
 
+lookup abvs4 {
+sub shrd-ka' shrd-nukta [pa.sub ma.sub sa.sub shrd-vs-vocl] by ka.top.alt3;
+sub shrd-ka' shrd-nukta @char.subs by ka.top.alt;
+sub shrd-ka' shrd-nukta [ra.sub ya.sub ya.sub.alt ya.sub.short ruu.sub ru.sub] by ka.alt;
+
+sub shrd-ga' shrd-nukta @char.subs by ga.top;
+
+sub shrd-kha' shrd-nukta @char.subs by kha.top;
+
+sub shrd-ja' shrd-nukta @char.subs by ja.top;
+sub jaa' shrd-nukta @char.subs by jaa.top;
+
+sub shrd-ca' shrd-nukta @char.subs by ca.top;
+
+sub shrd-na' shrd-nukta @char.subs by na.top;
+sub shrd-pha' shrd-nukta @char.subs by pha.top;
+
+sub shrd-ya' shrd-nukta @char.subs by ya.top;
+
+sub shrd-lla' shrd-nukta @char.subs by lla.top;
+
+} abvs4;
+
+lookup abvs5 {    
+sub shrd-vs-o sharda-vow-mod by vow.sp.1;
+} abvs5;
+
 lookup abvs1;
 lookup abvs2;
 lookup abvs3;
+lookup abvs4;
+lookup abvs5;
+
 
 #> feature
 #< feature
 } abvs;
+
+
+
+
+
+
 
 
 
@@ -653,8 +758,8 @@ pos [@char.simpwithouti @otmark]' [ka.top.alt ka.top.alt2 ka.top.alt3] sha.sub 3
 pos [@char.simpwithouti @otmark]' [ka.top.alt ka.top.alt2 ka.top.alt3 ga.top pa.top ba.top bha.top ma.top ra.top va.top sha.top] la.sub 200;
 pos [@char.simpwithouti @otmark]' [ka.top.alt ka.top.alt2 ka.top.alt3] nna.sub 300;
 pos [@char.simpwithouti @otmark]' [ga.top nya.top dda.top] jnya.sub 300;
-pos [@char.simpwithouti @otmark]' [ba.top] [ga.sub ja.sub] 300;
-pos [@char.simpwithouti @otmark]' [ga.top] ja.sub 200;
+pos [@char.simpwithouti @otmark]' [ba.top] [ga.sub ja.sub ja.nukta.sub] 300;
+pos [@char.simpwithouti @otmark]' [ga.top] [ja.sub ja.nukta.sub] 200;
 
 pos [@char.simpwithouti @otmark]' [ta.alt] ya.sub.alt 150;
 
@@ -668,8 +773,8 @@ pos [@char.simpwithouti @otmark]' [ka.top.alt ka.top.alt2 ka.top.alt3 ra.top] sh
 pos [@char.simpwithouti @otmark]' [ka.top.alt ka.top.alt2 ka.top.alt3 ga.top pa.top ba.top bha.top ma.top ra.top va.top sha.top ha.top] la.sub.short 100;
 pos [@char.simpwithouti @otmark]' [ka.top.alt ka.top.alt2 ka.top.alt3 ha.top] nna.sub.short 250;
 pos [@char.simpwithouti @otmark]' [ga.top nya.top dda.top] jnya.sub.short 250;
-pos [@char.simpwithouti @otmark]' [ba.top] [ga.sub.short ja.sub.short] 250;
-pos [@char.simpwithouti @otmark]' [ga.top] ja.sub.short 150;
+pos [@char.simpwithouti @otmark]' [ba.top] [ga.sub.short ja.sub.short ja.sub.nukta.short] 250;
+pos [@char.simpwithouti @otmark]' [ga.top] [ja.sub.short ja.sub.nukta.short] 150;
 
 pos [@char.simpwithouti @otmark]' ha.top [na.sub va.sub] 200;
 pos [@char.simpwithouti @otmark]' ha.top [nna.sub] 300;
@@ -722,6 +827,12 @@ lookup dist4;
 #> feature
 #< feature
 } dist;
+
+
+
+
+
+
 
 
 
@@ -820,6 +931,12 @@ sub jnya' @yara.short by jnya.top;
 #> feature
 #< feature
 } ss01;
+
+
+
+
+
+
 
 
 
