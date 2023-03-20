@@ -57,6 +57,8 @@
 #/< vtags
 #< classes
 
+
+
 #> languagesystem
 languagesystem DFLT dflt;
 languagesystem latn dflt;
@@ -501,11 +503,11 @@ feature blws {
 
     lookup blws2 {
 
-    sub [ka.alt shrd-ga shrd-dda shrd-ta shrd-bha shrd-sha shrd-lla] shrd-vs-u' by vs-u.alt;
-    sub [ka.alt shrd-ga shrd-dda shrd-ta shrd-bha shrd-ra shrd-sha shrd-lla] shrd-vs-uu' by vs-uu.alt;
+    sub [ka.alt shrd-ga shrd-dda shrd-ta shrd-bha shrd-sha shrd-lla rga rsha] shrd-vs-u' by vs-u.alt;
+    sub [ka.alt shrd-ga shrd-dda shrd-ta shrd-bha shrd-ra shrd-sha shrd-lla rga rsha] shrd-vs-uu' by vs-uu.alt;
 
-    sub [ka.alt shrd-ga shrd-dda shrd-ta shrd-bha shrd-sha shrd-lla] shrd-nukta shrd-vs-u' by vs-u.alt;
-    sub [ka.alt shrd-ga shrd-dda shrd-ta shrd-bha shrd-ra shrd-sha shrd-lla] shrd-nukta shrd-vs-uu' by vs-uu.alt;
+    sub [ka.alt shrd-ga shrd-dda shrd-ta shrd-bha shrd-sha shrd-lla rga] shrd-nukta shrd-vs-u' by vs-u.alt;
+    sub [ka.alt shrd-ga shrd-dda shrd-ta shrd-bha shrd-ra shrd-sha shrd-lla rsha] shrd-nukta shrd-vs-uu' by vs-uu.alt;
 
     sub [ka.alt.sub ga.sub dda.sub ta.sub bha.sub lla.sub ga.nukta.sub lla.nukta.sub ka.alt.nukta.sub ka.alt.nukta.sub.short] shrd-vs-u' by vs-u.alt;
     sub [ka.alt.sub.short ga.sub.short dda.sub.short ta.sub.short bha.sub.short lla.sub.short ga.sub.nukta.short lla.sub.nukta.short] shrd-vs-u' by vs-u.alt;
